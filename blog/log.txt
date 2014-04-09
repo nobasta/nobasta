@@ -1,0 +1,4 @@
+Configuration file: c:/wamp/www/basta/blog/_config.yml
+            Source: c:/wamp/www/basta/blog
+       Destination: c:/wamp/www/basta/blog/_site
+      Generating... 
