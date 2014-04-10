@@ -7,6 +7,18 @@
 <style>
 	@import url(css/style.css);
 </style>
+<script>
+  (function() {
+    var cx = '007198356881933529805:53fq1thxxzo';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//www.google.com/cse/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
 </head>
 <body>
 <header>
@@ -15,7 +27,7 @@
 <div class="content">
 	<div class="menu-blog">
 		<button class="btn btn-success">Regístrate</button>
-		<button class="btn btn-default">+ Añadir Entrada</button>
+		<a href="blog"><button class="btn btn-default">+ Añadir Entrada</button></a>
 		<button class="btn btn-default">Guía de Protección</button>
 		<button class="btn btn-default">Directorio</button>
 		<button class="btn btn-default">Vota x Basta de Tortura</button>
@@ -45,9 +57,13 @@
 	<div class="results">
 		<div class="search-title">Buscar un Caso</div>
 		<div class="search">
-			<input />
-			<button type="button" class="btn btn-primary">Buscar</button>
-			</div>
+			<gcse:search></gcse:search>
+			 <ul class="posts">
+				{% for post in site.posts %}
+				  <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+				{% endfor %}
+			</ul>
+		</div>
 			<div class="resultados">
 				<ul>
 					<li>1dsfsd dsfsdf</li>
