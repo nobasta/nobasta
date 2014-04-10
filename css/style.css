@@ -31,12 +31,7 @@
 		float:right;
 		margin:20px
 	}
-	.search input {
-		border:1px solid #285e8e;
-		border-top-left-radius:8px;
-		border-bottom-left-radius:8px;
-		padding:5.8px;
-	}
+
 	.btn-primary {
 		border-radius:0px;
 	}
