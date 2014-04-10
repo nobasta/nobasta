@@ -2,7 +2,7 @@
 layout: post
 title:  "Take Input from the User"
 date:   2014-04-09 20:56:41
-categories: marihuana
+categories: xna
 ---
 
 protected void UpdateInput()
