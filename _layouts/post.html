@@ -1,9 +1,18 @@
 ---
-layout: default
+layout: frame
 ---
-<h2>{{ page.title }}</h2>
-<p class="meta">{{ page.date | date_to_string }}</p>
-<div class="post">
-{{ content }}
+<div class="entrada">
+	<h2>
+		{{ page.title }}
+	</h2>
+	<div class="meta">
+		<small>
+			<b>Publicado:	</b>
+				{{ page.date | date_to_string }}
+		</small>
+	</div>
+	<div class="post">
+		{{ content }}
+	</div>
+	
 </div>
-♥
