@@ -58,17 +58,13 @@
 		<div class="search-title">Buscar un Caso</div>
 		<div class="search">
 			<gcse:search></gcse:search>
-			 <ul class="posts">
+		</div>
+			<div class="resultados">
+				 <ul class="posts">
 				{% for post in site.posts %}
 				  <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
 				{% endfor %}
 			</ul>
-		</div>
-			<div class="resultados">
-				<ul>
-					<li>1dsfsd dsfsdf</li>
-					<li>Resultado dos</li>
-				</ul>
 			</div>
 	</div>
 </div>
