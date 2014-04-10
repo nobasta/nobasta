@@ -49,8 +49,10 @@ footer, .content, header {
 .resultados {
 		text-align:left;
 	}
-.resultados ul.posts {
+ul {
 		list-style:none;
+}
+.resultados ul.posts {
 		margin-left:-15px;
 		margin-top:20px;
 	}

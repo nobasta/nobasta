@@ -2,4 +2,22 @@
 layout: frame
 title: Basta México
 ---
-<h2>mero</h2>
+<ul>
+	{% for post in site.posts %}
+		<li>
+			<h3>
+				<a href="{{ post.url }}">
+					{{ post.title }}
+				</a>
+			</h3>
+			<p>
+				<small>
+					{{  post.date | date_to_string }}
+				</small>
+			</p>
+			<div class="entrada">
+				{{ post.content }}
+			</div> 
+		</li>
+	{% endfor %}
+<ul>
