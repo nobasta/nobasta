@@ -5,8 +5,6 @@ date:   2014-04-09 20:56:41
 categories: marihuana
 ---
 
-
-
 protected void UpdateInput()
 {
     // Get the game pad state.
