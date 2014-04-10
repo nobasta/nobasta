@@ -1,23 +1,26 @@
 ---
 layout: frame
 ---
+
+
 <div class="entrada">
 	<h2>
 		{{ page.title }}
 	</h2>
 	<div class="meta">
 		<small>
-			<b>Publicado:	</b>
+			<b>
+				Publicado:	
+			</b>
 				{{ page.date | date_to_string }}
 		</small>
 	</div>
 	<div class="post">
 		{{ content }}
 	</div>
-	
 	<div class="social-share">
 		<div class="fb-like" data-href="http://www.enmexicoserinocentenobasta.tk{{ page.url }}" data-layout="button" data-action="recommend" data-show-faces="false" data-share="true"></div>
-		<a href="https://twitter.com/intent/tweet?button_hashtag=BastaMexico&text={{ page.title }}" class="twitter-hashtag-button" data-url="http://www.enmexicoserinocentenobasta.tk{{ page.url }}" data-lang="en" data-related="jasoncosta">Tweet #BastaMexico</a>
+		<a href="https://twitter.com/intent/tweet?button_hashtag=BastaMexico&text={{ page.title }}" class="twitter-hashtag-button" data-url="http://www.enmexicoserinocentenobasta.tk{{ page.url }}" data-lang="es" data-related="jasoncosta">Tweet #BastaMexico</a>
 		<g:plusone size="medium"></g:plusone>
 	</div>
 </div>
