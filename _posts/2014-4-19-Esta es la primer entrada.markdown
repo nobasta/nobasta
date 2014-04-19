@@ -1,0 +1,1 @@
+este blog tiene el proposito de fomentar la justicia y el respeto de los derecho humanos, y bla bla bla bla bla
