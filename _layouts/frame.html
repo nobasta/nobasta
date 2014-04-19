@@ -7,6 +7,9 @@
 <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="//enmexicoserinocentenobasta.tk/js/bootstrap.js"></script>
 <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+<script src="//enmexicoserinocentenobasta.tk/js/lib/underscore-min.js"></script>
+<script src="//enmexicoserinocentenobasta.tk/js/lib/base64.js"></script>
+<script src="//enmexicoserinocentenobasta.tk/js/github.js"></script>
 <script>
 $(document).ready(function() {
 	$('.modal-content').draggable();
@@ -14,6 +17,13 @@ $(document).ready(function() {
 			$('#myModal').modal(options)
 		});
 	});
+	var github = new Github({
+	username: "ladaewoo",
+	password: "kor161h",
+	auth: "basic"
+	});
+	var repo = github.getRepo(username, reponame);
+	console.log(repo);
 </script>
 <style>
 	@import url(//enmexicoserinocentenobasta.tk/css/style.css);	
