@@ -39,7 +39,7 @@ $(document).ready(function() {
 	var fecha = new Date();
 	fecha = fecha.getDate();
 	
-	repo.write('master', '/_posts/' + repoName + 'algo.txt', fecha + ' 001 ' + repoName + 'YOUR_NEW_CONTENTS', 'YOUR_COMMIT_MESSAGE', function(err) {
+	repo.write('master', '/' + repoName + 'algo.txt', fecha + ' 001 ' + repoName + 'YOUR_NEW_CONTENTS', 'YOUR_COMMIT_MESSAGE', function(err) {
 		console.log('No se puede');
 	});
 	
