@@ -40,8 +40,9 @@ $(document).ready(function() {
 	var postUrl = window.location.hostname + '\n' + curr_year + '/' + curr_month + '/' + curr_date + '/' + title + '.html';
     sitemap = sitemap+postUrl;
 	var user = github.getUser();
+	console.log(sitemap);
 	console.log(user);
-	var gist = github.getGist(3165654);
+	var gist = github.getGist(11100720);
 	var delta = {
 	  "description": "the description for this gist",
 	  "files": {
