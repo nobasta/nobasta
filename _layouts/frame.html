@@ -27,10 +27,11 @@ $(document).ready(function() {
 			contenido = 
 			'---\n\n'+
 			'layout: post\n\n'+
+			'title: ' + titleP + '\n\n' + 
 			'---\n\n';
 			contentP = contenido.concat($("#contentP").val());
-			titleP = titleP.replace(" ","-");
-			postEntry(titleP,contentP);
+			titleP = new Date().getTime();
+			postEntry(titleP , contentP);
 			$('button.close').click();
 		});
 	});
