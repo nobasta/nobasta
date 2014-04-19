@@ -17,31 +17,39 @@
 <body>
 <div id="fb-root"></div>
 <script>
-
+var titleP, contentP; 
 $(document).ready(function() {
 	$('.modal-content').draggable();
 	$("#launchMod").click(function(){
 			$('#myModal').modal(options)
 		});
+	$("#savePost").click(function(){
+			titleP = $("#titleP").val();
+			contentP = $("#contentP").val();
+			postEntry(titleP,contentP);
+			$('#myModal').modal(toggle);
+		});
 	});
 	
+	function postEntry (title , content) {
 	var username = 'another-';
 	var github = new Github({
 	username: username,
 	password: "pass1990",
 	auth: "basic"
 	});
-	
 	var repo = github.getRepo(username, 'another');
-	console.log(repo);
-	
-	repoName = Math.random();
-	var fecha = new Date();
-	fecha = fecha.getDate();
-	
-	repo.write('master', '/_posts/' + repoName + 'algo.txt', fecha + ' 001 ' + repoName + 'YOUR_NEW_CONTENTS', 'YOUR_COMMIT_MESSAGE', function(err) {
+	var d = new Date();
+    var curr_date = d.getDate();
+    var curr_month = d.getMonth() + 1;
+    var curr_year = d.getFullYear();
+    var fecha = curr_year + "-" + curr_month + "-" + curr_date;
+	repo.write('master', '/_posts/' + fecha + '-' + 
+	title + '.markdown', content, 
+	username , function(err) {
 		console.log('No se puede');
 	});
+	}
 	
 !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];
 if(!d.getElementById(id)){js=d.createElement(s);js.id=id;
@@ -123,9 +131,11 @@ ga('send', 'pageview');
         <h4 class="modal-title" id="myModalLabel"><strong> #BastaMexico </strong> | Nueva Entrada </h4>
       </div>
       <div class="modal-body">
-		<input placeholder="Título" />
-		<textarea placeholder="Contenido" class="textarea"></textarea>
-      </div>
+		
+			<input id="titleP" placeholder="Título" />
+			<textarea id="contentP" placeholder="Contenido" class="textarea"></textarea>
+		
+	  </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
         <a><button type="button" id="savePost" class="btn btn-primary">Publicar Entrada</button></a>
