@@ -68,22 +68,20 @@ $(document).ready(function(){
 		FB.ui(
 			  {
 			   method: 'feed',
-			   name: 'The Facebook SDK for Javascript',
-			   caption: 'Bringing Facebook to the desktop and mobile web',
+			   name: '#BastaMexico de corrupción, tortura e injusticia',
+			   caption: 'En México ser inocente no basta',
 			   description: (
-				  'A small JavaScript library that allows you to harness ' +
-				  'the power of Facebook, bringing the user\'s identity, ' +
-				  'social graph and distribution power to your site.'
+				  '#BastaMexico Blog que promueve la justicia' +
+				  ' y el respeto de los derechos humanos.'
 			   ),
-			   link: 'https://developers.facebook.com/docs/reference/javascript/',
-			   picture: 'http://www.fbrell.com/public/f8.jpg'
+			   link: 'http://enmexicoserinocentenobasta.tk/',
+			   picture: 'http://enmexicoserinocentenobasta.tk/img/logo---emsinb.png'
 			  },
 			  function(response) {
 				if (response && response.post_id) {
 				console.log(response);
-				  alert('Post was published.');
 				} else {
-				  alert('Post was not published.');
+				 console.log('Hubo un error');
 				}
 		});
 	});
