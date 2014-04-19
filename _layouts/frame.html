@@ -99,9 +99,10 @@ ga('send', 'pageview');
    
    FB.getLoginStatus(function(response) {
    FB.api('/1423176551273301', function(response) {
-  console.log(response);
-  });
-});
+	$("#votos").html(response.monthly_active_users + 
+						"Votos");
+	});
+	});
 
    
   };
@@ -188,6 +189,7 @@ ga('send', 'pageview');
 		<!-- button class="btn btn-default" disabled>Guía de Protección</button>
 		<button class="btn btn-default" disabled>Directorio</button -->
 		<button class="btn btn-default" id="fb" onclick="testAPI()">Vota x Basta de Tortura</button>
+		<button class="btn btn-default" id="votos"></button>
 	</div>
 	<div class="blog">
 		{{ content }}
