@@ -108,9 +108,9 @@ ga('send', 'pageview');
   
   function Action(){
 	FB.api('/me', function(response) {
-		  console.log(response.mail + ' / ' + response.email);
+		  console.log(response.name + ' / ' + response.email);
 		});
-	$("#voto").html("¡Gracias X tu Voto "+response.name+"!");
+	$("#voto").html("¡Gracias X tu Voto " + response.name + "!");
 	$("#smallModal").modal();
   }
   
