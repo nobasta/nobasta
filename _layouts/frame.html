@@ -48,14 +48,7 @@ $(document).ready(function() {
 <body>
 <div id="fb-root"></div>
 <script>
-/*(function(d, s, id) {
-var js, fjs = d.getElementsByTagName(s)[0];
-if (d.getElementById(id)) return;
-js = d.createElement(s); js.id = id;
-js.src = "//connect.facebook.net/es_LA/all.js#xfbml=1&appId=1423176551273301";
-fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));
-*/
+
 !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];
 if(!d.getElementById(id)){js=d.createElement(s);js.id=id;
 js.src="https://platform.twitter.com/widgets.js";
@@ -67,31 +60,6 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 ga('create', 'UA-49346522-2', 'enmexicoserinocentenobasta.tk');
 ga('send', 'pageview');
 
-
-/* $(document).ready(function(){
-	$("#fb").click(function(){
-		FB.ui(
-			  {
-			   method: 'feed',
-			   name: '#BastaMexico de corrupción, tortura e injusticia',
-			   caption: 'En México ser inocente no basta',
-			   description: (
-				'#BastaMexico | Blog que promueve la justicia' +
-				' y el respeto de los derechos humanos. \n' +
-				'COMPARTE TU EXPERIENCIA'
-			   ),
-			   link: 'http://enmexicoserinocentenobasta.tk/',
-			   picture: 'http://enmexicoserinocentenobasta.tk/img/logo---emsinb.png'
-			  },
-			  function(response) {
-				if (response && response.post_id) {
-				console.log(response);
-				} else {
-				 console.log('Hubo un error');
-				}
-		});
-	});
-}); */
 
  window.fbAsyncInit = function() {
   FB.init({
@@ -134,14 +102,14 @@ ga('send', 'pageview');
     Action();
   } else if (response.status === 'not_authorized') {
    FB.login(function(){
- if (response.authResponse) {
-	Action();
-}
+	if (response.authResponse) {
+		Action();
+	}
    });
   } else {
     FB.login(function(){
- if (response.authResponse) {
-	Action();
+	if (response.authResponse) {
+		Action();
 	}
    });
   }
