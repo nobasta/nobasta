@@ -96,9 +96,7 @@ ga('send', 'pageview');
     cookie     : true, 
     xfbml      : true  
   });
-  };
-  
-  /* make the API call */
+    /* make the API call */
 FB.api(
     "/me/subscribers",
     function (response) {
@@ -107,6 +105,8 @@ FB.api(
       }
     }
 );
+  };
+  
   
     (function(d){
    var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
