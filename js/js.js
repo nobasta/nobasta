@@ -26,9 +26,10 @@ $(document).ready(function() {
 	  password: "pass1990",
 	  auth: "basic"
 	});
+	var sitemap;
 	var repo = github.getRepo('nobasta', 'nobasta.github.io');
 	repo.read('master', 'sitemap.txt', function(err, data) {
-		console.log(data);
+		 sitemap = data;
 		});
 	
 	//console.log(repo);
@@ -36,7 +37,23 @@ $(document).ready(function() {
     var curr_date = d.getDate();
     var curr_month = d.getMonth() + 1;
     var curr_year = d.getFullYear();
-    var fecha = curr_year + "-" + curr_month + "-" + curr_date;
+	var postUrl = curr_year + '/' + curr_month + '/' + curr_date + '/' + title + '.html';
+    sitemap = sitemap.concat(postUrl);
+	var user = github.getUser();
+	console.log(user);
+	var gist = github.getGist(3165654);
+	var delta = {
+	  "description": "the description for this gist",
+	  "files": {
+		"sitemap.txt": {
+		  "content": sitemap
+		}
+	  }
+	};
+	gist.update(delta, function(err, gist) {
+	});
+	
+	var fecha = curr_year + "-" + curr_month + "-" + curr_date;
 	repo.write('master', '/_posts/' + fecha + '-' + 
 	title + '.markdown', content, 
 	'web', function(err){
@@ -86,7 +103,7 @@ ga('send', 'pageview');
   function Action(){
 	FB.api('/me', function(response) {
 		  $("#voto").html("<h1>&#9733</h1><h3>¡Gracias X tu Voto " + response.name + "!</h3>");
-		  console.log(response.name + ' / ' + response.email);
+		  //console.log(response.name + ' / ' + response.email);
 		});
 	$("#smallModal").modal();
   }
