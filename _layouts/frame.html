@@ -134,15 +134,15 @@ ga('send', 'pageview');
     Action();
   } else if (response.status === 'not_authorized') {
    FB.login(function(){
-
+ if (response.authResponse) {
 	Action();
-
+}
    });
   } else {
     FB.login(function(){
-
+ if (response.authResponse) {
 	Action();
-	
+	}
    });
   }
  });
