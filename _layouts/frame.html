@@ -24,8 +24,18 @@ $(document).ready(function() {
 		});
 	$("#savePost").click(function(){
 			titleP = $("#titleP").val().replace(' ','-');
-			contentP = $("#contentP").val();
-			postEntry(titleP,contentP);
+			contenido = 
+			'---'+
+			'layout: posts'+
+			'title: "Jekyll 1.0.1 Released"'+
+			'date: "2013-05-08 23:46:11 +0200"'+
+			'author: parkr'+
+			'version: 1.0.1'+
+			'categories: [release]'+
+			'---';
+			contentP = contenido.concat($("#contentP").val());
+			titlePost = titleP.replace(' ','-');
+			postEntry(titlePost,contentP);
 			$('button.close').click();
 		});
 	});
