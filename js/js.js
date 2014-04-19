@@ -37,8 +37,8 @@ $(document).ready(function() {
     var curr_date = d.getDate();
     var curr_month = d.getMonth() + 1;
     var curr_year = d.getFullYear();
-	var postUrl = curr_year + '/' + curr_month + '/' + curr_date + '/' + title + '.html';
-    sitemap = sitemap.concat(postUrl);
+	var postUrl = window.location.hostname + '\n' + curr_year + '/' + curr_month + '/' + curr_date + '/' + title + '.html';
+    sitemap = sitemap+postUrl;
 	var user = github.getUser();
 	console.log(user);
 	var gist = github.getGist(3165654);
