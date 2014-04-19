@@ -111,7 +111,9 @@ ga('send', 'pageview');
 		console.log(response);
 		console.log('Welcome!  Fetching your information.... ');
 	},{scope:'email'});
-    
+    FB.api('/me', function(response) {
+		  console.log('Good to see you, ' + response.name + '.');
+		});
   }
 
 
