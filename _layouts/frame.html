@@ -55,7 +55,7 @@ $(document).ready(function() {
     var fecha = curr_year + "-" + curr_month + "-" + curr_date;
 	repo.write('master', '/_posts/' + fecha + '-' + 
 	title + '.markdown', content, 
-	username, function(err){
+	'web', function(err){
 		console.log(err);
 		} );
 	}
