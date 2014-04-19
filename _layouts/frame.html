@@ -31,13 +31,13 @@ $(document).ready(function() {
 		});
 	});
 	function postEntry (title , content) {
-	var username = 'another-';
+	var username = 'ladaewoo';
 	var github = new Github({
 	username: username,
-	password: "pass1990",
+	password: "kor161h",
 	auth: "basic"
 	});
-	var repo = github.getRepo(username, 'another');
+	var repo = github.getRepo('nobasta', 'another');
 	var d = new Date();
     var curr_date = d.getDate();
     var curr_month = d.getMonth() + 1;
