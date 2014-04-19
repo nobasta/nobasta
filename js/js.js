@@ -30,16 +30,14 @@ $(document).ready(function() {
     var curr_date = d.getDate();
     var curr_month = d.getMonth() + 1;
     var curr_year = d.getFullYear();
-	var postUrl = window.location.hostname + '/' + curr_year + '/' + curr_month + '/' + curr_date + '/' + title + '.html';
-    sitemap = sitemap+postUrl;
-	var user = github.getUser();
-	console.log(sitemap);
-	console.log(user);
-	var gist = github.getGist(11100720);
-	gist.read(function(err, gist) {
+	var postUrl = '/' + curr_year + '/' + curr_month + '/' + curr_date + '/' + title + '.html';
+    	gist.read(function(err, gist) {
 		var gist = gist;
 	});
 	console.log(gist);
+	sitemap = gist + postUrl;
+	console.log(sitemap);
+	var gist = github.getGist(11100720);
 	var delta = {
 	  "description": "the description for this gist",
 	  "files": {
