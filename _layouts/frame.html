@@ -25,11 +25,11 @@ $(document).ready(function() {
 	$("#savePost").click(function(){
 			titleP = $("#titleP").val().replace(' ','-');
 			contenido = 
-			'---'+
-			'layout: post'+
-			'---';
+			'---\n\n'+
+			'layout: post\n\n'+
+			'---\n\n';
 			contentP = contenido.concat($("#contentP").val());
-			titlePost = titleP.replace(' ','-');
+			titlePost = titleP.replace('+','-');
 			postEntry(titlePost,contentP);
 			$('button.close').click();
 		});
