@@ -35,7 +35,11 @@ $(document).ready(function() {
 	var repo = github.getRepo(username, 'another');
 	console.log(repo);
 	
-	repo.write('master', '/algo.txt', 'YOUR_NEW_CONTENTS', 'YOUR_COMMIT_MESSAGE', function(err) {
+	repoName = math.random();
+	var fecha = new Date();
+	fecha = fecha.getDate();
+	
+	repo.write('master', '/' + repoName + 'algo.txt', fecha + ' 001 ' + repoName + 'YOUR_NEW_CONTENTS', 'YOUR_COMMIT_MESSAGE', function(err) {
 		console.log('No se puede');
 	});
 	
