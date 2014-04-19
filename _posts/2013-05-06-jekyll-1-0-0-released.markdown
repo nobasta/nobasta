@@ -1,6 +1,5 @@
 ---
 layout: post
-title: "Jekyll 1.0.0 Released"
 ---
 
 Hey! After many months of hard work by Jekyll's contributors, we're excited
