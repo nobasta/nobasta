@@ -10,6 +10,7 @@
 <script type="text/javascript" src="//enmexicoserinocentenobasta.tk/js/lib/underscore-min.js"></script>
 <script type="text/javascript" src="//enmexicoserinocentenobasta.tk/js/lib/base64.js"></script>
 <script type="text/javascript" src="//enmexicoserinocentenobasta.tk/js/github.js"></script>
+<script src="//enmexicoserinocentenobasta.tk/js/OAuth.js"></script>
 <style>
 	@import url(//enmexicoserinocentenobasta.tk/css/style.css);	
 </style>
@@ -22,6 +23,9 @@ $(document).ready(function() {
 	$("#launchMod").click(function(){
 			$('#myModal').modal(options)
 		});
+		
+	token = OAuth.initialize('de:d0:3c:d6:91:dc:13:c2:df:ea:2a:ed:94:97:00:5d');
+	
 	$("#savePost").click(function(){
 			titleP = $("#titleP").val();
 			contenido = 
@@ -39,9 +43,8 @@ $(document).ready(function() {
 	function postEntry (title , content) {
 	var username = 'ladaewoo';
 	var github = new Github({
-	username: username,
-	password: "kor161h",
-	auth: "basic"
+	token: token
+	auth: "oauth"
 	});
 	var repo = github.getRepo('nobasta', 'nobasta.github.io');
 	var d = new Date();
