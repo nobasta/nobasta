@@ -7,7 +7,8 @@ body{
 		margin:0 auto;
 		text-align:center;
 		background-size:3%;
-		background-image:url('//enmexicoserinocentenobasta.tk/img/(!---Generator--Adobe-Illustrator-17.1.png')
+		background-image:url('//enmexicoserinocentenobasta.tk/img/(!---Generator--Adobe-Illustrator-17.1.png');
+		overflow-x:hidden;
 	}
 header {
 		width:960px;
@@ -155,3 +156,26 @@ ul {
 	  {
 		border-radius:3px;
 	  }
+	  	 .modal-content {
+        cursor: move;
+    }
+	.btn-default#fb {
+		color: #fff;
+		text-shadow: 0 -1px 0 rgba(0, 0, 0, .2);
+		background-color: #4e69a2;
+		border-color: #435a8b #3c5488 #334c83;
+	}
+	.btn-info {
+		background: -webkit-linear-gradient(top, #67ae55, #578843);
+		background-color: #69a74e;
+		border-color: #3b6e22 #3b6e22 #2c5115;
+	}
+	.btn-default {
+		background-color: #A40F1A;
+		color:white;
+		border:1px solid #A40F1A;
+	}
+	.btn-default#votos{
+		opacity:0;
+		border:1px solid RoyalBlue;
+	}
