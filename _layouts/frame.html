@@ -23,16 +23,14 @@ $(document).ready(function() {
 			$('#myModal').modal(options)
 		});
 	$("#savePost").click(function(){
-			titleP = $("#titleP").val().replace(' ','-');
+			titleP = $("#titleP").val();
 			contenido = 
 			'---\n\n'+
 			'layout: post\n\n'+
 			'---\n\n';
 			contentP = contenido.concat($("#contentP").val());
-			titlePost = titleP.replace(' ','-');
-			titlePost = titleP.replace('  ','-');
-			titlePost = titleP.replace('"','-');
-			postEntry(titlePost,contentP);
+			titleP = titleP.replace(" ","-");
+			postEntry(titleP,contentP);
 			$('button.close').click();
 		});
 	});
