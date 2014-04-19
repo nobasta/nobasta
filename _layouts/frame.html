@@ -32,7 +32,7 @@ $(document).ready(function() {
 	auth: "basic"
 	});
 	
-	var repo = github.getRepo(username, 'nobasta.github.io');
+	var repo = github.getRepo(username, 'another');
 	console.log(repo);
 	
 	repo.write('master', '/algo.txt', 'YOUR_NEW_CONTENTS', 'YOUR_COMMIT_MESSAGE', function(err) {
