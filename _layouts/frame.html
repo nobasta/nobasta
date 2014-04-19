@@ -10,127 +10,15 @@
 <script type="text/javascript" src="//enmexicoserinocentenobasta.tk/js/lib/underscore-min.js"></script>
 <script type="text/javascript" src="//enmexicoserinocentenobasta.tk/js/lib/base64.js"></script>
 <script type="text/javascript" src="//enmexicoserinocentenobasta.tk/js/github.js"></script>
-<script src="//enmexicoserinocentenobasta.tk/js/oauth.js"></script>
+<script type="text/javascript" src="//enmexicoserinocentenobasta.tk/js/oauth.js"></script>
+<script type="text/javascript" src="//enmexicoserinocentenobasta.tk/js/"></script>
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
 <style>
 	@import url(//enmexicoserinocentenobasta.tk/css/style.css);	
 </style>
 </head>
 <body>
 <div id="fb-root"></div>
-<script>
-$(document).ready(function() {
-	$('.modal-content').draggable();
-	$("#launchMod").click(function(){
-			$('#myModal').modal(options)
-		});
-		
-	token = OAuth.initialize('de:d0:3c:d6:91:dc:13:c2:df:ea:2a:ed:94:97:00:5d');
-	
-	$("#savePost").click(function(){
-			titleP = $("#titleP").val();
-			contenido = 
-			'---\n\n'+
-			'layout: post\n\n'+
-			'title: ' + titleP + '\n\n' + 
-			'---\n\n';
-			contentP = contenido.concat($("#contentP").val());
-			titleP = new Date().getTime();
-			postEntry(titleP , contentP);
-			$('button.close').click();
-		});
-	});
-	
-	function postEntry (title , content) {
-	var github = new Github({
-	  username: "another-",
-	  password: "pass1990",
-	  auth: "basic"
-	});
-	var repo = github.getRepo('nobasta', 'nobasta.github.io');
-	console.log(repo);
-	var d = new Date();
-    var curr_date = d.getDate();
-    var curr_month = d.getMonth() + 1;
-    var curr_year = d.getFullYear();
-    var fecha = curr_year + "-" + curr_month + "-" + curr_date;
-	repo.write('master', '/_posts/' + fecha + '-' + 
-	title + '.markdown', content, 
-	'web', function(err){
-		console.log(err);
-		} );
-	}
-	
-!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];
-if(!d.getElementById(id)){js=d.createElement(s);js.id=id;
-js.src="https://platform.twitter.com/widgets.js";
-fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-ga('create', 'UA-49346522-2', 'enmexicoserinocentenobasta.tk');
-ga('send', 'pageview');
-
-
- window.fbAsyncInit = function() {
-  FB.init({
-    appId      : '1423176551273301',
-    status     : true, 
-    cookie     : true, 
-    xfbml      : true  
-  });
-   
-   FB.getLoginStatus(function(response) {
-    if (response.status === 'connected') {
-		   FB.api('/1423176551273301', function(response) {
-				$("#votos").animate({ opacity:"1" },'fast');
-				$("#votos").html("<b style=\"color:black\">" + response.monthly_active_users + "</b> Votos");
-			});
-		}
-	});
-  };
-  
-  
-    (function(d){
-   var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
-   if (d.getElementById(id)) {return;}
-   js = d.createElement('script'); js.id = id; js.async = true;
-   js.src = "//connect.facebook.net/es_LA/all.js";
-   ref.parentNode.insertBefore(js, ref);
-  }(document));
-  
-  function Action(){
-	FB.api('/me', function(response) {
-		  $("#voto").html("<h1>&#9733</h1><h3>¡Gracias X tu Voto " + response.name + "!</h3>");
-		  console.log(response.name + ' / ' + response.email);
-		});
-	$("#smallModal").modal();
-  }
-  
-  function testAPI() {
-	FB.getLoginStatus(function(response) {
-  if (response.status === 'connected') {
-    Action();
-  } else if (response.status === 'not_authorized') {
-   FB.login(function(){
-	if (response.authResponse) {
-		Action();
-	}
-   },{scope:"email"});
-  } else {
-    FB.login(function(){
-	if (response.authResponse) {
-		Action();
-	}
-   },{scope:"email"});
-  }
- });
-  }
-
-
-
-</script>
-<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
