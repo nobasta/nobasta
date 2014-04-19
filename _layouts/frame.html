@@ -39,6 +39,10 @@ $(document).ready(function() {
 		color:white;
 		border:1px solid #A40F1A
 	}
+	#votos {
+		opacity:0;
+	
+	}
 </style>
 </head>
 <body>
@@ -99,6 +103,9 @@ ga('send', 'pageview');
    
    FB.getLoginStatus(function(response) {
    FB.api('/1423176551273301', function(response) {
+   $("#votos").animate({
+				opacity:"1"
+				},'fast');
 	$("#votos").html("<b style=\"color:black\">" + response.monthly_active_users + 
 						"</b> Votos");
 	});
