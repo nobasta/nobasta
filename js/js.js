@@ -27,7 +27,11 @@ $(document).ready(function() {
 	  auth: "basic"
 	});
 	var repo = github.getRepo('nobasta', 'nobasta.github.io');
-	console.log(repo);
+	repo.read('master', 'sitemap.txt', function(err, data) {
+		console.log(data);
+		});
+	
+	//console.log(repo);
 	var d = new Date();
     var curr_date = d.getDate();
     var curr_month = d.getMonth() + 1;
