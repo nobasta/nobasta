@@ -26,7 +26,7 @@ $(document).ready(function() {
 			titleP = $("#titleP").val();
 			contentP = $("#contentP").val();
 			postEntry(titleP,contentP);
-			window.location = window.location;
+			setTimeout(window.location = window.location,500);
 		});
 	});
 	function postEntry (title , content) {
