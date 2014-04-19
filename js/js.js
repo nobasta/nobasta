@@ -32,9 +32,8 @@ $(document).ready(function() {
     var curr_year = d.getFullYear();
 	var postUrl = '/' + curr_year + '/' + curr_month + '/' + curr_date + '/' + title + '.html';
     	gist.read(function(err, gist) {
-		var gist = gist;
+		console.log(gist);
 	});
-	console.log(gist);
 	sitemap = gist + postUrl;
 	console.log(sitemap);
 	var gist = github.getGist(11100720);
