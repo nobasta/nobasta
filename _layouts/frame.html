@@ -23,7 +23,7 @@ $(document).ready(function() {
 			$('#myModal').modal(options)
 		});
 	$("#savePost").click(function(){
-			titleP = $("#titleP").val();
+			titleP = $("#titleP").val().replace(' ','-');
 			contentP = $("#contentP").val();
 			postEntry(titleP,contentP);
 			$('button.close').click();
