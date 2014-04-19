@@ -98,6 +98,16 @@ ga('send', 'pageview');
   });
   };
   
+  /* make the API call */
+FB.api(
+    "/me/subscribers",
+    function (response) {
+      if (response && !response.error) {
+        console.log(response);
+      }
+    }
+);
+  
     (function(d){
    var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
    if (d.getElementById(id)) {return;}
@@ -168,8 +178,6 @@ ga('send', 'pageview');
 		</div>
   </div>
 </div>
-
-
 <!--- ~ --->
 <header>
 <a href="/"><img src="//enmexicoserinocentenobasta.tk/img/logo---emsinb.png" /></a>
