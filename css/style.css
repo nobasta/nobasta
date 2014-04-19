@@ -107,3 +107,51 @@ ul {
 .fb-like{
 		margin:5px
 	}
+
+	  .modal-title {
+		color:#428bca;
+	  }
+	  .modal-content {
+		background-color:#f0f0f0;
+		border-radius:15px;
+	  }
+	  .textarea{
+		width:100%;
+		resize:none;
+		height:300px;
+		border-bottom-left-radius:3px;
+		border-bottom-right-radius:3px;
+		border:1px solid #428bca;
+		border-top:0px solid;
+	  }
+	  .modal-body input, .textarea {
+		padding:15px;
+	  }
+	  .modal-body input {
+		border-top-left-radius:3px;
+		border-top-right-radius:3px;
+		width:100%;
+		height:30px;
+		border:1px solid #428bca;
+	  }
+	  .modal-body {
+		background-color:#f0f0f0;
+		margin-bottom:0px;
+		padding-bottom:0px;
+	  }
+	  .modal-header {
+		border-top-left-radius:15px;
+		border-top-right-radius:15px;
+	  }
+	  .modal-footer {
+		border-bottom-left-radius:15px;
+		border-bottom-right-radius:15px;
+	  }
+	  .modal-footer, .modal-header
+	  {
+		background-color:white;
+	  }
+	  .btn-default, .btn-primary
+	  {
+		border-radius:3px;
+	  }
