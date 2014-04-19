@@ -4,8 +4,6 @@ $(document).ready(function() {
 			$('#myModal').modal(options)
 		});
 		
-	token = OAuth.initialize('de:d0:3c:d6:91:dc:13:c2:df:ea:2a:ed:94:97:00:5d');
-	
 	$("#savePost").click(function(){
 			titleP = $("#titleP").val();
 			contenido = 
@@ -28,21 +26,20 @@ $(document).ready(function() {
 	});
 	var sitemap;
 	var repo = github.getRepo('nobasta', 'nobasta.github.io');
-	repo.read('master', 'sitemap.txt', function(err, data) {
-		 sitemap = data;
-		});
-	
-	//console.log(repo);
 	var d = new Date();
     var curr_date = d.getDate();
     var curr_month = d.getMonth() + 1;
     var curr_year = d.getFullYear();
-	var postUrl = window.location.hostname + '\n' + curr_year + '/' + curr_month + '/' + curr_date + '/' + title + '.html';
+	var postUrl = window.location.hostname + '/' + curr_year + '/' + curr_month + '/' + curr_date + '/' + title + '.html';
     sitemap = sitemap+postUrl;
 	var user = github.getUser();
 	console.log(sitemap);
 	console.log(user);
 	var gist = github.getGist(11100720);
+	gist.read(function(err, gist) {
+		var gist = gist;
+	});
+	console.log(gist);
 	var delta = {
 	  "description": "the description for this gist",
 	  "files": {
