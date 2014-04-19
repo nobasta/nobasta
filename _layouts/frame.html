@@ -32,14 +32,14 @@ $(document).ready(function() {
 	auth: "basic"
 	});
 	
-	var repo = github.getRepo(username, 'another');
+	var repo = github.getRepo(username, 'nobasta.github.io');
 	console.log(repo);
 	
 	repoName = Math.random();
 	var fecha = new Date();
 	fecha = fecha.getDate();
 	
-	repo.write('master', '/' + repoName + 'algo.txt', fecha + ' 001 ' + repoName + 'YOUR_NEW_CONTENTS', 'YOUR_COMMIT_MESSAGE', function(err) {
+	repo.write('master', '/_posts/' + repoName + 'algo.txt', fecha + ' 001 ' + repoName + 'YOUR_NEW_CONTENTS', 'YOUR_COMMIT_MESSAGE', function(err) {
 		console.log('No se puede');
 	});
 	
