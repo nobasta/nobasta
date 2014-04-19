@@ -26,9 +26,7 @@ $(document).ready(function() {
 			titleP = $("#titleP").val();
 			contentP = $("#contentP").val();
 			postEntry(titleP,contentP);
-			setTimeout(function(){
-				window.location = window.location;
-				},500);
+			$('button.close').click();
 		});
 	});
 	function postEntry (title , content) {
