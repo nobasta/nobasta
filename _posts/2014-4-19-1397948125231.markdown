@@ -1,0 +1,9 @@
+---
+
+layout: post
+
+title: entrada uno
+
+---
+
+entrada uno

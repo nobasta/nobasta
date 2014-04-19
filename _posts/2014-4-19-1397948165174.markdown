@@ -1,0 +1,9 @@
+---
+
+layout: post
+
+title: entrada tres
+
+---
+
+tres tres tres

@@ -1,0 +1,9 @@
+---
+
+layout: post
+
+title: cuatro
+
+---
+
+entrada cuatro
