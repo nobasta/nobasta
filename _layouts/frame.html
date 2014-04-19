@@ -30,7 +30,6 @@ $(document).ready(function() {
 			$('button.close').click();
 		});
 	});
-	
 	function postEntry (title , content) {
 	var username = 'another-';
 	var github = new Github({
@@ -46,9 +45,7 @@ $(document).ready(function() {
     var fecha = curr_year + "-" + curr_month + "-" + curr_date;
 	repo.write('master', '/_posts/' + fecha + '-' + 
 	title + '.markdown', content, 
-	username , function(err) {
-		console.log('No se puede');
-	});
+	username );
 	}
 	
 !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];
