@@ -96,17 +96,6 @@ ga('send', 'pageview');
     cookie     : true, 
     xfbml      : true  
   });
-
-  FB.Event.subscribe('auth.authResponseChange', function(response) {
-    if (response.status === 'connected') {
-		console.log(response);
-      testAPI();
-    } else if (response.status === 'not_authorized') {
-      FB.login();
-    } else {
-      FB.login();
-    }
-  });
   };
   
     (function(d){
@@ -118,13 +107,14 @@ ga('send', 'pageview');
   }(document));
   
   function testAPI() {
-  FB.login(function(){
-	console.log(response);
-	});
-    console.log('Welcome!  Fetching your information.... ');
-    FB.api('/me', function(response) {
-      console.log('Good to see you, ' + response.name + '.');
-    });
+	FB.login(function(){
+		console.log(response);
+		console.log('Welcome!  Fetching your information.... ');
+		FB.api('/me', function(response) {
+		  console.log('Good to see you, ' + response.name + '.');
+		});
+	},{scope:'email'});
+    
   }
 
 
