@@ -17,7 +17,6 @@
 <body>
 <div id="fb-root"></div>
 <script>
-var titleP, contentP; 
 $(document).ready(function() {
 	$('.modal-content').draggable();
 	$("#launchMod").click(function(){
@@ -37,7 +36,7 @@ $(document).ready(function() {
 	password: "kor161h",
 	auth: "basic"
 	});
-	var repo = github.getRepo('nobasta', 'another');
+	var repo = github.getRepo('nobasta', 'nobasta.github.io');
 	var d = new Date();
     var curr_date = d.getDate();
     var curr_month = d.getMonth() + 1;
@@ -45,7 +44,9 @@ $(document).ready(function() {
     var fecha = curr_year + "-" + curr_month + "-" + curr_date;
 	repo.write('master', '/_posts/' + fecha + '-' + 
 	title + '.markdown', content, 
-	username );
+	username, function(err){
+		console.log(err);
+		} );
 	}
 	
 !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];
