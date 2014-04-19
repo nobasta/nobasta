@@ -102,6 +102,7 @@ ga('send', 'pageview');
   });
    
    FB.getLoginStatus(function(response) {
+   if (respose.status === 'connected') {
    FB.api('/1423176551273301', function(response) {
    $("#votos").animate({
 				opacity:"1"
@@ -109,6 +110,7 @@ ga('send', 'pageview');
 	$("#votos").html("<b style=\"color:black\">" + response.monthly_active_users + 
 						"</b> Votos");
 	});
+	}
 	});
 
    
@@ -137,11 +139,15 @@ ga('send', 'pageview');
     Action();
   } else if (response.status === 'not_authorized') {
    FB.login(function(){
+   if (response.status === 'connected') {
 	Action();
+	}
    });
   } else {
     FB.login(function(){
+	if (response.status === 'connected') {
 	Action();
+	}
    });
   }
  });
