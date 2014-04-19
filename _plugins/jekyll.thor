@@ -1,37 +1,26 @@
-require 'fileutils'
- 
+require "stringex"
 class Jekyll < Thor
-  include FileUtils
- 
-  method_options :format => :optional
-  def draft(name)
-    format = options[:format] || "markdown"
-    slug = name.downcase.gsub(/ +/,'-').gsub(/[^-\w]/,'').sub(/-+$/,'')
-    filename = slug + ".#{format}"
-    mkdir_p "_drafts"
-    if File.exists?("_drafts/#{filename}")
-      puts "#{filename} already exists!"
-      return
+  desc "new", "create a new post"
+  method_option :editor, :default => "subl"
+  def new(*title)
+    title = title.join(" ")
+    date = Time.now.strftime('%Y-%m-%d')
+    filename = "_posts/#{date}-#{title.to_url}.md"
+
+    if File.exist?(filename)
+      abort("#{filename} already exists!")
     end
-    File.open("_drafts/#{filename}","w+") do |f|
-      f.puts "---"
-      f.puts "layout: post"
-      f.puts "title: #{name}"
-      f.puts "---"
+
+    puts "Creating new post: #{filename}"
+    open(filename, 'w') do |post|
+      post.puts "---"
+      post.puts "layout: post"
+      post.puts "title: \"#{title.gsub(/&/,'&amp;')}\""
+      post.puts "tags:"
+      post.puts " -"
+      post.puts "---"
     end
-    puts "Created _drafts/#{filename}"
-  end
- 
-  def publish(file=nil)
-    unless file
-      puts "Choose file:"
-      @files = Dir["_drafts/*"]
-      @files.each_with_index { |f,i| puts "#{i+1}: #{f}" }
-      print "> "
-      num = STDIN.gets
-      file = @files[num.to_i - 1]
-    end
-    now = Date.today.strftime("%Y-%m-%d").gsub(/-0/,'-')
-    mv file, "_posts/#{now}-#{File.basename(file)}"
+
+    system(options[:editor], filename)
   end
 end

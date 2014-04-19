@@ -6,10 +6,15 @@
 <title>En México Ser Inocente No Basta</title>
 <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="//enmexicoserinocentenobasta.tk/js/bootstrap.js"></script>
+<script type="text/javascript" src="//enmexicoserinocentenobasta.tk/js/FileSaver.js"></script>
 <script>
 $(document).ready(function(){
 	$("#launchMod").click(function(){
 			$('#myModal').modal(options)
+		});
+	$("#savePost").click(function(){
+			var blob = new Blob(["Hello, world!"], {type: "text/plain;charset=utf-8"});
+			saveAs(blob, "hello world.txt");
 		});
 	});
 </script>
@@ -54,7 +59,7 @@ ga('send', 'pageview');
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-        <a><button type="button" class="btn btn-primary">Publicar Entrada</button></a>
+        <a><button type="button" id="savePost" class="btn btn-primary">Publicar Entrada</button></a>
       </div>
     </div>
   </div>
