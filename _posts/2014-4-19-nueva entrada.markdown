@@ -1,1 +1,0 @@
-papapa ba la pa ra pa
