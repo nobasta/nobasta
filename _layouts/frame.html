@@ -106,19 +106,25 @@ ga('send', 'pageview');
    ref.parentNode.insertBefore(js, ref);
   }(document));
   
-  function testAPI() {
-	FB.getLoginStatus(function(response) {
-  if (response.status === 'connected') {
-    var uid = response.authResponse.userID;
-    var accessToken = response.authResponse.accessToken;
+  function Action(){
 	FB.api('/me', function(response) {
 		  console.log('Good to see you, ' + response.name + '.');
 		  console.log(response);
 		});
+  }
+  
+  function testAPI() {
+	FB.getLoginStatus(function(response) {
+  if (response.status === 'connected') {
+    Action();
   } else if (response.status === 'not_authorized') {
-   FB.login();
+   FB.login(function(){
+	Action();
+   });
   } else {
-    FB.login();
+    FB.login(function(){
+	Action();
+   });
   }
  });
   }
