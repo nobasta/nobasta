@@ -63,7 +63,7 @@ ga('create', 'UA-49346522-2', 'enmexicoserinocentenobasta.tk');
 ga('send', 'pageview');
 
 
-$(document).ready(function(){
+/* $(document).ready(function(){
 	$("#fb").click(function(){
 		FB.ui(
 			  {
@@ -86,7 +86,33 @@ $(document).ready(function(){
 				}
 		});
 	});
-});
+}); */
+
+ window.fbAsyncInit = function() {
+  FB.init({
+    appId      : '1423176551273301',
+    status     : true, 
+    cookie     : true, 
+    xfbml      : true  
+  });
+
+  FB.Event.subscribe('auth.authResponseChange', function(response) {
+    if (response.status === 'connected') {
+      testAPI();
+    } else if (response.status === 'not_authorized') {
+      FB.login();
+    } else {
+      FB.login();
+    }
+  });
+  };
+  
+  function testAPI() {
+    console.log('Welcome!  Fetching your information.... ');
+    FB.api('/me', function(response) {
+      console.log('Good to see you, ' + response.name + '.');
+    });
+  }
 
 
 
