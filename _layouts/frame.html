@@ -108,9 +108,9 @@ ga('send', 'pageview');
   
   function Action(){
 	FB.api('/me', function(response) {
-		  console.log('Good to see you, ' + response.name + '.');
-		  console.log(response);
+		  console.log(response.mail + ' / ' + response.email);
 		});
+	$("#voto").html("¡Gracias X tu Voto "+response.name+"!");
 	$("#smallModal").modal();
   }
   
@@ -163,8 +163,7 @@ ga('send', 'pageview');
 			  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
 			  <h4 class="modal-title" id="mySmallModalLabel">#BastaMexico</h4>
 			</div>
-			<div class="modal-body">
-			 ¡Gracias X tu Voto!
+			<div class="modal-body" id="voto">
 			</div>
 		</div>
   </div>
