@@ -41,12 +41,12 @@ $(document).ready(function() {
 	});
 	
 	function postEntry (title , content) {
-	var username = 'ladaewoo';
 	var github = new Github({
 	token: token,
 	auth: "oauth"
 	});
 	var repo = github.getRepo('nobasta', 'nobasta.github.io');
+	console.log(repo);
 	var d = new Date();
     var curr_date = d.getDate();
     var curr_month = d.getMonth() + 1;
