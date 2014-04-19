@@ -42,8 +42,9 @@ $(document).ready(function() {
 	
 	function postEntry (title , content) {
 	var github = new Github({
-	token: token,
-	auth: "oauth"
+	  username: "another-",
+	  password: "pass1990",
+	  auth: "basic"
 	});
 	var repo = github.getRepo('nobasta', 'nobasta.github.io');
 	console.log(repo);
