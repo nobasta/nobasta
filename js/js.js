@@ -27,7 +27,7 @@ $(document).ready(function() {
 	});
 
 	repo = github.getRepo('nobasta', 'nobasta.github.io');
-    gist = github.getGist(11103118);
+    gist = github.getGist(11103174);
 	gist.read(function(err, gist) {
 	gistFile = gist.files.sitemap.content;
 	});
