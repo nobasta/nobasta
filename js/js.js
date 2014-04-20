@@ -18,7 +18,7 @@ $(document).ready(function() {
 		});
 	});
 	
-	var sitemap, curr_date, curr_month, date, curr_year, gistFile, urlPost, gist, repo, postUrl, delta, fecha, github;
+	var sitemap, curr_date, curr_month, date, curr_year, gistFile, urlPost, gist, repo, postUrl, fecha, github;
 	function postEntry (title , content) {
 	github = new Github({
 	  username: "another-",
@@ -29,18 +29,17 @@ $(document).ready(function() {
 	repo = github.getRepo('nobasta', 'nobasta.github.io');
     gist = github.getGist(11102949);
 	gist.read(function(err, gist) {
+	gistFile = gist.files.sitemap.content;
 	date = new Date();
     curr_date = date.getDate();
     curr_month = date.getMonth() + 1;
     curr_year = date.getFullYear();
 	postUrl = curr_year + '/' + curr_month + '/' + curr_date + '/' + title + '.html';
 	urlPost = '\nhttp://www.enmexicoserinocentenobasta.tk/' + postUrl;
-	gistFile = gist.files.sitemap.content;
 	sitemap = gistFile + urlPost;
-	 console.log( sitemap );
 	});
 	
-	delta = {
+	var delta = {
 		"description" : "sitemap",
 		  "files": {
 			"sitemap": {
