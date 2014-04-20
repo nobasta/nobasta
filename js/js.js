@@ -14,7 +14,6 @@ $(document).ready(function() {
 			password: "pass1990",
 			auth: "basic"
 		});	
-		B64.decode($(".post").val());
 	}
 	
 	$("#savePost").click(function(){
