@@ -13,24 +13,25 @@ $(document).ready(function() {
 			username: "another-",
 			password: "pass1990",
 			auth: "basic"
-		});	
+		});
+		console.log($(".post").val());
 	}
 	
 	$("#savePost").click(function(){
-			contentP = $("#contentP").val();
-			contentP = B64.encode(contentP);
-			titleP = $("#titleP").val();
-			titleP.replace('"','');
-			contenido = 
-			'---\n\n'+
-			'layout: post\n\n'+
-			'title: ' + titleP + '\n\n' + 
-			'---\n\n';
-			contentP = contenido.concat(contentP);
-			//contentP = B64.encode(contentP);
-			titleP = new Date().getTime();
-			postEntry(titleP , contentP);
-			$('button.close').click();
+		contentP = $("#contentP").val();
+		contentP = B64.encode(contentP);
+		titleP = $("#titleP").val();
+		titleP.replace('"','');
+		contenido = 
+		'---\n\n'+
+		'layout: post\n\n'+
+		'title: ' + titleP + '\n\n' + 
+		'---\n\n';
+		contentP = contenido.concat(contentP);
+		//contentP = B64.encode(contentP);
+		titleP = new Date().getTime();
+		postEntry(titleP , contentP);
+		$('button.close').click();
 		});
 	});
 	
@@ -38,10 +39,9 @@ $(document).ready(function() {
 
 	repo = github.getRepo('nobasta', 'nobasta.github.io');
     gist = github.getGist(11103174);
-
-		gist.read(function(err, gist) {
-			gistFile = gist.files.sitemap.content;
-		});
+	gist.read(function(err, gist) {
+		gistFile = gist.files.sitemap.content;
+	});
 
 	console.log(gistFile);
 	date = new Date();
