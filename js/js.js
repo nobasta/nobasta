@@ -33,7 +33,9 @@ $(document).ready(function() {
 	var postUrl = '/' + curr_year + '/' + curr_month + '/' + curr_date + '/' + title + '.html';
     var gist = github.getGist(11100720);
 	gist.read(function(err, gist) {
-		console.log(gist.files[0].content);
+		console.log(gist.files[0]);
+		console.log(gist.files.content);
+		console.log(gist.files.sitemap.content);
 	});
 	sitemap = gist + postUrl;
 	//console.log(sitemap);
