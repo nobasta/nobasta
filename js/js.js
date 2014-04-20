@@ -32,8 +32,9 @@ $(document).ready(function() {
     var curr_year = d.getFullYear();
 	var postUrl = curr_year + '/' + curr_month + '/' + curr_date + '/' + title + '.html';
     var gist = github.getGist(11102124);
+	var contentGist;
 	gist.read(function(err, gist) {
-	var contentGist = gist.files.sitemap.content;
+	contentGist = gist.files.sitemap.content;
 	});
 	var urlPost = ('\nhttp://www.enmexicoserinocentenobasta.tk/' + postUrl);
 	var sitemap = contentGist + urlPost;
