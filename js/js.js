@@ -53,7 +53,6 @@ $(document).ready(function() {
 		}
 		
 	gist.update(delta, function( err, gist ) {
-		console.log(gist);
 	})
 	
 	/*repo.write('master', '/_posts/' + fecha + '-' + 
