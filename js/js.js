@@ -11,9 +11,11 @@ $(document).ready(function() {
 	function(){
 	
 	enc = "#encoded";
+	entP = ".entrada p";
 	
 	$(enc).html(B64.decode($(enc).text()));
-
+	contentEncoded = B64.decode($(entP).text());
+	$(entP).html(contentEncoded);
 	
 	
 		github = new Github({
