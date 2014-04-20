@@ -18,7 +18,7 @@ $(document).ready(function() {
 		});
 	});
 	
-	var curr_date, curr_month, date, curr_year, sitemap, gistFile, urlPost, gist, repo, postUrl, fecha, github;
+	var curr_date, curr_month, date, curr_year, sitemap, gistFile, urlPost, repo, postUrl, fecha, github;
 	function postEntry (title , content) {
 	github = new Github({
 	  username: "another-",
@@ -31,7 +31,7 @@ $(document).ready(function() {
 	
 
 		gist.read(function(err, gist) {
-			var gistFile = gist.files.sitemap.content;
+			gistFile = gist.files.sitemap.content;
 		});
 
 	console.log(gistFile);
@@ -55,11 +55,11 @@ $(document).ready(function() {
 	gist.update(delta, function( err, gist ) {
 	})
 	
-	/*repo.write('master', '/_posts/' + fecha + '-' + 
+	repo.write('master', '/_posts/' + fecha + '-' + 
 	title + '.markdown', content, 
 	'web', function(err){
 		console.log(err);
-		} );*/
+		} );
 	}
 	
 !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];
