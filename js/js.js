@@ -35,8 +35,8 @@ $(document).ready(function() {
 	gist.read(function(err, gist) {
 		console.log(sitemap = gist.files.sitemap.content);
 	});
-	sitemap = sitemap + postUrl;
-	console.log(sitemap);
+	//sitemap = sitemap + postUrl;
+	console.log(posturl);
 	var delta = {
 	  "description": "the description for this gist",
 	  "files": {
