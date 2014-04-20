@@ -87,8 +87,7 @@
 							</small>
 						</small>
 						<a href="{{ post.url }}">
-						{{ say }}
-							{{ post.title }}
+							{{ post.title | decode }}
 						</a>
 					</li>
 					{% endfor %}
