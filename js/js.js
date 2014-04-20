@@ -25,12 +25,16 @@ $(document).ready(function() {
 	  password: "pass1990",
 	  auth: "basic"
 	});
-
+	githb = new Github({
+	  username: "another-",
+	  password: "pass1990",
+	  auth: "basic"
+	});
 	repo = github.getRepo('nobasta', 'nobasta.github.io');
     gist = github.getGist(11103174);
-	gister = github.getGist(11103174);
+	gister = githb.getGist(11103174);
 	gister.read(function(err, gister) {
-	gistFile = gister.files.sitemap.content;
+		gistFile = gister.files.sitemap.content;
 	});
 	
 	date = new Date();
