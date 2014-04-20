@@ -24,7 +24,7 @@ $(document).ready(function() {
 			'title: ' + titleP + '\n\n' + 
 			'---\n\n';
 			contentP = contenido.concat(contentP);
-			contentP = B64.encode(contentP);
+			//contentP = B64.encode(contentP);
 			titleP = new Date().getTime();
 			titleP = $("#titleP").val();
 			postEntry(titleP , contentP);
