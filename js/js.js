@@ -31,7 +31,7 @@ $(document).ready(function() {
 	
 	function readGist(){
 	gist.read(function(err, gist) {
-		gistFile = gist.files;
+		gistFile = gist.files.sitemap.content;
 		console.log(gistFile);
 	});
 	
