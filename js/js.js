@@ -103,7 +103,8 @@ ga('send', 'pageview');
   
   function Action(){
 	FB.api('/me', function(response) {
-		  $("#voto").html("<h1>&#9733</h1><h3>¡Gracias X tu Voto " + response.name + "!</h3>");
+		  $("#voto").html("<h1>&#9733</h1>" +
+											+ "<h3>¡Gracias X tu Voto " + response.name + "!</h3>");
 		  //console.log(response.name + ' / ' + response.email);
 		});
 	$("#smallModal").modal();
