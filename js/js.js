@@ -39,7 +39,7 @@ $(document).ready(function() {
 	fecha = curr_year + "-" + curr_month + "-" + curr_date;
 	postUrl = curr_year + "/" + curr_month + "/" + curr_date + '/' + title + '.html';
 	urlPost = '\nhttp://www.enmexicoserinocentenobasta.tk/' + postUrl;
-	sitemap = gistFile + urlPost;
+	var sitemap = gistFile + urlPost;
 	
 	var delta = {
 		  "files": {
