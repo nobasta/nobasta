@@ -40,7 +40,7 @@ $(document).ready(function() {
 	var delta = {
 	  "description": "the description for this gist",
 	  "files": {
-		"sitemap.txt": {
+		"sitemap": {
 		  "content": sitemap
 		}
 	  }
