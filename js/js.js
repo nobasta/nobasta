@@ -41,7 +41,7 @@ $(document).ready(function() {
 	var delta = {
 		  "files": {
 			"sitemap": {
-			  "content": sitemap
+			  "content": 'nepakauo' + sitemap
 			}
 		  }
 		};
