@@ -31,9 +31,8 @@ $(document).ready(function() {
 	
 	function readGist(){
 	gist.read(function(err, gist) {
-		gistFile = gist.files.sitemap.content;
+		gistFile = gist.files;
 		console.log(gistFile);
-		return gistFile;
 	});
 	
 	}
