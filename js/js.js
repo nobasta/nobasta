@@ -10,8 +10,10 @@ $(document).ready(function() {
 	window.onload = 
 	function(){
 	enc = "#encoded";
+	enco = "#enc";
 	
 	$(enc).html(B64.decode($(enc).text()));
+	$(enco).html(B64.decode($(enco).text()));
 	
 		github = new Github({
 			username: "another-",
