@@ -34,8 +34,7 @@ $(document).ready(function() {
 	var postUrl = curr_year + '/' + curr_month + '/' + curr_date + '/' + title + '.html';
     var gist = github.getGist(11102124);
 	gist.read(function(err, gist) {
-		contentGist = gist.files.sitemap.content
-	});
+		contentGist = gist.files.sitemap.content;
 	urlPost = ('\nhttp://www.enmexicoserinocentenobasta.tk/' + postUrl);
 	sitemap = contentGist + urlPost;
 	var delta = {
@@ -45,10 +44,9 @@ $(document).ready(function() {
 		}
 	  }
 	};
-	
 	gist.update(delta, function(err, gist) {
 	});
-	
+		});
 	var fecha = curr_year + "-" + curr_month + "-" + curr_date;
 	/*repo.write('master', '/_posts/' + fecha + '-' + 
 	title + '.markdown', content, 
