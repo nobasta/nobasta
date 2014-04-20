@@ -34,22 +34,19 @@ $(document).ready(function() {
 	var postUrl = curr_year + '/' + curr_month + '/' + curr_date + '/' + title + '.html';
     var gist = github.getGist(11102124);
 	gist.read(function(err, gist) {
-		console.log(contentGist = gist.files.sitemap.content);
+		contentGist = gist.files.sitemap.content
 	});
-	console.log(urlPost = ('\nhttp://www.enmexicoserinocentenobasta.tk/' + postUrl));
+	urlPost = ('\nhttp://www.enmexicoserinocentenobasta.tk/' + postUrl);
 	sitemap = contentGist + urlPost;
-	console.log(sitemap);
 	var delta = {
 	  "files": {
 		"sitemap": {
-		  "content": "shshahhahsaksjdllasd"
+		  "content": sitemap
 		}
 	  }
 	};
 	
 	gist.update(delta, function(err, gist) {
-		console.log(gist);
-		console.log(err);
 	});
 	
 	var fecha = curr_year + "-" + curr_month + "-" + curr_date;
