@@ -33,8 +33,9 @@ $(document).ready(function() {
 	gist.read(function(err, gist) {
 		gistFile = gist.files.sitemap.content;
 		console.log(gistFile);
+		return gistFile;
 	});
-	return gistFile;
+	
 	}
 	
 	date = new Date();
