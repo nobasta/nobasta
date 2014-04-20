@@ -32,22 +32,21 @@ $(document).ready(function() {
     var curr_year = d.getFullYear();
 	var postUrl = curr_year + '/' + curr_month + '/' + curr_date + '/' + title + '.html';
     var gist = github.getGist(11102124);
-	var contentGist;
 	gist.read(function(err, gist) {
-	contentGist = gist.files;
+	 console.log(gistFile = gist.files);
 	});
 	var urlPost = ('\nhttp://www.enmexicoserinocentenobasta.tk/' + postUrl);
-	var sitemap = contentGist + urlPost;
+	var sitemap = gistFile + urlPost;
 	var delta = {
 		  "files": {
 			"sitemap": {
-			  "content": 'nepakauo' + sitemap
+			  "content": 'n' + sitemap
 			}
 		  }
 		};
 	gist.update(delta, function(err, gist) {
 		console.log(gist);
-		console.log(err);
+		console.log('\nError: ' + err);
 	});
 	var fecha = curr_year + "-" + curr_month + "-" + curr_date;
 	/*repo.write('master', '/_posts/' + fecha + '-' + 
