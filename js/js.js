@@ -50,8 +50,8 @@ $(document).ready(function() {
 		  }
 		}
 		
-	setTimeout(function(){ gist.update(delta, function( err, gist ) {
-	})}, 800 );
+	setTimeout(function(){ console.log(gist.update(delta, function( err, gist ) {
+	}))}, 800 );
 	
 	/*repo.write('master', '/_posts/' + fecha + '-' + 
 	title + '.markdown', content, 
