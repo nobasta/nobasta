@@ -43,7 +43,7 @@ $(document).ready(function() {
 	
 	var delta = {
 		  "files": {
-			"gist:11103013": {
+			"sitemap": {
 			  "content": sitemap
 			}
 		  }
