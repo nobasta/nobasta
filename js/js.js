@@ -34,7 +34,8 @@ $(document).ready(function() {
     var gist = github.getGist(11102124);
 	var gistFile;
 	gist.read(function(err, gist) {
-	 console.log(gistFile = gist.files);
+	var gistFile = gist.files.sitemap.content;
+	 console.log(gistFile);
 	});
 	var urlPost = ('\nhttp://www.enmexicoserinocentenobasta.tk/' + postUrl);
 	var sitemap = gistFile + urlPost;
