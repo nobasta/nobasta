@@ -32,11 +32,10 @@ $(document).ready(function() {
     var curr_month = d.getMonth() + 1;
     var curr_year = d.getFullYear();
 	var postUrl = curr_year + '/' + curr_month + '/' + curr_date + '/' + title + '.html';
-    var gist = github.getGist(11100720);
+    var gist = github.getGist(11102124);
 	gist.read(function(err, gist) {
 		console.log(contentGist = gist.files.sitemap.content);
 	});
-	//sitemap = sitemap + postUrl;
 	console.log(urlPost = ('\nhttp://www.enmexicoserinocentenobasta.tk/' + postUrl));
 	sitemap = contentGist + urlPost;
 	console.log(sitemap);
