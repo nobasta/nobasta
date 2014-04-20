@@ -24,7 +24,7 @@ module Jekyll
 	class BaseDecode < Liquid::Tag
 		def initialize(tag_name, text, tokens)
 		super
-		@text = Base64.decode64(@text)
+		@text = Base64.decode64(text)
 		end
 		
 		def render(context)
