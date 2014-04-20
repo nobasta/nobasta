@@ -11,7 +11,7 @@ $(document).ready(function() {
 			'layout: post\n\n'+
 			'title: ' + titleP + '\n\n' + 
 			'---\n\n';
-			contentP = contenido.concat($("#contentP").val());
+			contentP = contenido.concat($("#contentP").val().replace('"',"_"));
 			titleP = new Date().getTime();
 			postEntry(titleP , contentP);
 			$('button.close').click();
