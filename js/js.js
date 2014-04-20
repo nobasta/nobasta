@@ -30,13 +30,13 @@ $(document).ready(function() {
     var curr_date = d.getDate();
     var curr_month = d.getMonth() + 1;
     var curr_year = d.getFullYear();
-	var postUrl = '\n/' + curr_year + '/' + curr_month + '/' + curr_date + '/' + title + '.html';
+	var postUrl = curr_year + '/' + curr_month + '/' + curr_date + '/' + title + '.html';
     var gist = github.getGist(11100720);
 	gist.read(function(err, gist) {
 		console.log(sitemap = gist.files.sitemap.content);
 	});
 	//sitemap = sitemap + postUrl;
-	console.log(posturl);
+	console.log('\nhttp://www.enmexicoserinocentenobasta.tk/ ' + postUrl);
 	var delta = {
 	  "description": "the description for this gist",
 	  "files": {
