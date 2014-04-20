@@ -6,9 +6,9 @@ $(document).ready(function() {
 						
 		});
 		
+	
 	window.onload = 
 	function(){
-		console.log(B64);
 		github = new Github({
 			username: "another-",
 			password: "pass1990",
@@ -20,13 +20,14 @@ $(document).ready(function() {
 	
 	$("#savePost").click(function(){
 			titleP = $("#titleP").val();
+			contentP = $("#contentP").val();
 			contenido = 
 			'---\n\n'+
 			'layout: post\n\n'+
 			'title: ' + titleP + '\n\n' + 
 			'---\n\n';
-			contentP = contenido.concat($("#contentP")
-			.val().replace('"',"_"));
+			contentP = contenido.concat(contentP);
+			contentP = B64.encode(contentP);
 			titleP = new Date().getTime();
 			postEntry(titleP , contentP);
 			$('button.close').click();
