@@ -41,9 +41,8 @@ $(document).ready(function() {
 	});
 	
 	var delta = {
-		"description" : "sitemap",
 		  "files": {
-			"sitemap": {
+			"gist:11103013": {
 			  "content": sitemap
 			}
 		  }
