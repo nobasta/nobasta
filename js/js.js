@@ -33,7 +33,7 @@ $(document).ready(function() {
 	var postUrl = '\n/' + curr_year + '/' + curr_month + '/' + curr_date + '/' + title + '.html';
     var gist = github.getGist(11100720);
 	gist.read(function(err, gist) {
-		console.log(var sitemap = gist.files.sitemap.content);
+		console.log(sitemap = gist.files.sitemap.content);
 	});
 	sitemap = sitemap + postUrl;
 	//console.log(sitemap);
