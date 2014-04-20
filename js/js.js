@@ -8,7 +8,7 @@ $(document).ready(function() {
 		
 	window.onload = 
 	function(){
-		console.log('ff');
+		console.log(B64);
 		github = new Github({
 			username: "another-",
 			password: "pass1990",
