@@ -23,14 +23,13 @@ $(document).ready(function() {
 		contentP = $("#contentP").val();
 		contentP = B64.encode(contentP);
 		titleP = $("#titleP").val();
-		titleP.replace('"','');
+		titleP = B64.encode(titleP);
 		contenido = 
 		'---\n\n'+
 		'layout: post\n\n'+
 		'title: ' + titleP + '\n\n' + 
 		'---\n\n';
 		contentP = contenido.concat(contentP);
-		//contentP = B64.encode(contentP);
 		titleP = new Date().getTime();
 		postEntry(titleP , contentP);
 		$('button.close').click();
