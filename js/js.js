@@ -35,10 +35,10 @@ $(document).ready(function() {
     curr_month = date.getMonth() + 1;
     curr_year = date.getFullYear();
 	postUrl = curr_year + '/' + curr_month + '/' + curr_date + '/' + title + '.html';
-	urlPost = ('\nhttp://www.enmexicoserinocentenobasta.tk/' + postUrl);
-	gistFile = gist.files;
+	urlPost = ( '\nhttp://www.enmexicoserinocentenobasta.tk/' + postUrl );
+	gistFile = gist.files.sitemap.content;
 	sitemap = gistFile + urlPost;
-	 console.log(sitemap);
+	 console.log( sitemap );
 	});
 	
 	delta = {
@@ -49,11 +49,13 @@ $(document).ready(function() {
 		  }
 		};
 		
-	gist.update(delta, function(err, gist) {
-		console.log(gist);
-		console.log('\nError: ' + err);
+	gist.update(delta, function( err, gist ) {
+		console.log( gist );
+		console.log( '\nError: ' + err );
 	});
+	
 	fecha = curr_year + "-" + curr_month + "-" + curr_date;
+	
 	/*repo.write('master', '/_posts/' + fecha + '-' + 
 	title + '.markdown', content, 
 	'web', function(err){
