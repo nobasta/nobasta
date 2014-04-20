@@ -33,10 +33,10 @@ $(document).ready(function() {
 	var postUrl = curr_year + '/' + curr_month + '/' + curr_date + '/' + title + '.html';
     var gist = github.getGist(11102124);
 	var gistFile;
-	var urlPost = ('\nhttp://www.enmexicoserinocentenobasta.tk/' + postUrl);
 	gist.read(function(err, gist) {
+	var urlPost = ('\nhttp://www.enmexicoserinocentenobasta.tk/' + postUrl);
 	var gistFile = gist.files.sitemap.content;
-	 var sitemap = gistFile + urlPost;
+	var sitemap = gistFile + urlPost;
 	 console.log(sitemap);
 	});
 	
@@ -47,6 +47,7 @@ $(document).ready(function() {
 			}
 		  }
 		};
+		
 	gist.update(delta, function(err, gist) {
 		console.log(gist);
 		console.log('\nError: ' + err);
