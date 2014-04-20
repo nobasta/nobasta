@@ -11,9 +11,13 @@ $(document).ready(function() {
 	function(){
 	enc = "#encoded";
 	enco = "#enc";
+	entP = ".entrada p";
 	
 	$(enc).html(B64.decode($(enc).text()));
 	$(enco).html(B64.decode($(enco).text()));
+	contentEncoded = B64.decode($(entP).text());
+	$(entP).html(contentEncoded);
+	
 	
 		github = new Github({
 			username: "another-",
@@ -21,15 +25,7 @@ $(document).ready(function() {
 			auth: "basic"
 		});
 		
-	contentEncoded = B64.decode($(".entrada p").text());
-	$(".entrada p").html(contentEncoded);
-	/*
-	titleEncoded = $("#encoded").text();
-	console.log(titleEncoded);
-	titleEncoded = B64.decode(titleEncoded);
-	$("#encoded").html(titleEncoded);
-	console.log(titleEncoded);
-	*/
+	
 	}
 	
 	$("#savePost").click(function(){
