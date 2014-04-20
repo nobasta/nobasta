@@ -19,7 +19,6 @@ $(document).ready(function() {
 	
 	
 	$("#savePost").click(function(){
-			titleP = $("#titleP").val();
 			contentP = $("#contentP").val();
 			contenido = 
 			'---\n\n'+
@@ -29,6 +28,7 @@ $(document).ready(function() {
 			contentP = contenido.concat(contentP);
 			contentP = B64.encode(contentP);
 			titleP = new Date().getTime();
+			titleP = $("#titleP").val();
 			postEntry(titleP , contentP);
 			$('button.close').click();
 		});
