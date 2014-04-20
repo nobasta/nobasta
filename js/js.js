@@ -3,15 +3,18 @@ $(document).ready(function() {
 	$('.modal-content').draggable();
 	$("#launchMod").click(function(){
 			$('#myModal').modal(options);
-			
+						
+		});
+		
+	window.onload = 
+	function(){
 	github = new Github({
 	  username: "another-",
 	  password: "pass1990",
 	  auth: "basic"
-	});
-			
-		});
-		
+	});	
+	}
+	
 	$("#savePost").click(function(){
 			titleP = $("#titleP").val();
 			contenido = 
