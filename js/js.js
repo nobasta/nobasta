@@ -39,8 +39,9 @@ $(document).ready(function() {
 	fecha = curr_year + "-" + curr_month + "-" + curr_date;
 	postUrl = curr_year + "/" + curr_month + "/" + curr_date + '/' + title + '.html';
 	urlPost = '\nhttp://www.enmexicoserinocentenobasta.tk/' + postUrl;
-	sitemap = gistFile + urlPost;
-	console.log(sitemap);
+	sitemap =  urlPost;
+	console.log('\ngf: '+ gistFile);
+	console.log('\nsitemap: ' + sitemap);
 	
 	var delta = {
 		  "files" : {
@@ -50,9 +51,9 @@ $(document).ready(function() {
 		  }
 		}
 		
-	console.log(gist.update(delta, function( err, gist ) {
+	gist.update(delta, function( err, gist ) {
 		console.log(gist);
-	}))
+	})
 	
 	/*repo.write('master', '/_posts/' + fecha + '-' + 
 	title + '.markdown', content, 
