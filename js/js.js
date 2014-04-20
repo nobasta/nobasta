@@ -31,7 +31,7 @@ $(document).ready(function() {
 	
 
 		gist.read(function(err, gist) {
-			gistFile = gist.files.sitemap.content;
+			var gistFile = gist.files.sitemap.content;
 		});
 
 	console.log(gistFile);
@@ -43,8 +43,6 @@ $(document).ready(function() {
 	postUrl = curr_year + "/" + curr_month + "/" + curr_date + '/' + title + '.html';
 	urlPost = '\nhttp://www.enmexicoserinocentenobasta.tk/' + postUrl;
 	sitemap =  gistFile + urlPost;
-	
-	console.log('\nsitemap: ' + sitemap);
 	
 	var delta = {
 		  "files" : {
