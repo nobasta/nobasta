@@ -28,7 +28,7 @@ $(document).ready(function() {
 
 	repo = github.getRepo('nobasta', 'nobasta.github.io');
     gist = github.getGist(11103174);
-	gist.read(function(err, gister) {
+	gist.read(function(err, gist) {
 		gistFile = gist.files.sitemap.content;
 	});
 	
@@ -40,6 +40,7 @@ $(document).ready(function() {
 	postUrl = curr_year + "/" + curr_month + "/" + curr_date + '/' + title + '.html';
 	urlPost = '\nhttp://www.enmexicoserinocentenobasta.tk/' + postUrl;
 	sitemap = gistFile + urlPost;
+	console.log(sitemap);
 	
 	var delta = {
 		  "files" : {
@@ -47,7 +48,7 @@ $(document).ready(function() {
 			  "content" : sitemap
 			}
 		  }
-		};
+		}
 		
 	setTimeout(function(){ gist.update(delta, function( err, gist ) {
 	})}, 800 );
