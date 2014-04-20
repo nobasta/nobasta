@@ -1,0 +1,9 @@
+---
+
+layout: post
+
+title: [object HTMLInputElement]
+
+---
+
+otra entrada etc
