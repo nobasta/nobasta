@@ -1,4 +1,5 @@
 var curr_date, curr_month, date, curr_year, sitemap, gistFile, urlPost, repo, postUrl, fecha, github;
+
 $(document).ready(function() {
 	$('.modal-content').draggable();
 	$("#launchMod").click(function(){
@@ -11,8 +12,6 @@ $(document).ready(function() {
 	function(){
 	
 	enc = "#encoded";
-
-	
 	$(enc).html(B64.decode($(enc).text()));
 
 	
