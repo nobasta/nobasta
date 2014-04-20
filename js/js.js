@@ -15,6 +15,8 @@ $(document).ready(function() {
 	});	
 	}
 	
+	console.log(B64.encode('hbxasi'));
+	
 	$("#savePost").click(function(){
 			titleP = $("#titleP").val();
 			contenido = 
