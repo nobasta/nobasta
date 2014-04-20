@@ -28,16 +28,16 @@ $(document).ready(function() {
 	var repo = github.getRepo('nobasta', 'nobasta.github.io');
     var gist = github.getGist(11102124);
 	var gistFile;
-	var sitemap;
+	var sitemap, curr_date, curr_month, curr_year;
 	gist.read(function(err, gist) {
 	var d = new Date();
-    var curr_date = d.getDate();
-    var curr_month = d.getMonth() + 1;
-    var curr_year = d.getFullYear();
+    curr_date = d.getDate();
+    curr_month = d.getMonth() + 1;
+    curr_year = d.getFullYear();
 	var postUrl = curr_year + '/' + curr_month + '/' + curr_date + '/' + title + '.html';
 	var urlPost = ('\nhttp://www.enmexicoserinocentenobasta.tk/' + postUrl);
 	var gistFile = gist.files.sitemap.content;
-	var sitemap = gistFile + urlPost;
+	sitemap = gistFile + urlPost;
 	 console.log(sitemap);
 	});
 	
