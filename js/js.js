@@ -38,22 +38,22 @@ $(document).ready(function() {
 	//sitemap = sitemap + postUrl;
 	console.log('\nhttp://www.enmexicoserinocentenobasta.tk/ ' + postUrl);
 	var delta = {
-	  "description": "the description for this gist",
 	  "files": {
 		"sitemap": {
 		  "content": sitemap
 		}
 	  }
 	};
-	gist.update(delta, function(err, gist) {
-	});
+	
+	//gist.update(delta, function(err, gist) {
+	//});
 	
 	var fecha = curr_year + "-" + curr_month + "-" + curr_date;
-	repo.write('master', '/_posts/' + fecha + '-' + 
+	/*repo.write('master', '/_posts/' + fecha + '-' + 
 	title + '.markdown', content, 
 	'web', function(err){
 		console.log(err);
-		} );
+		} );*/
 	}
 	
 !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];
