@@ -9,6 +9,10 @@ $(document).ready(function() {
 	
 	window.onload = 
 	function(){
+	enc = "#encoded";
+	
+	$(enc).html(B64.decode($(enc).text()));
+	
 		github = new Github({
 			username: "another-",
 			password: "pass1990",
@@ -17,6 +21,13 @@ $(document).ready(function() {
 		
 	contentEncoded = B64.decode($(".entrada p").text());
 	$(".entrada p").html(contentEncoded);
+	/*
+	titleEncoded = $("#encoded").text();
+	console.log(titleEncoded);
+	titleEncoded = B64.decode(titleEncoded);
+	$("#encoded").html(titleEncoded);
+	console.log(titleEncoded);
+	*/
 	}
 	
 	$("#savePost").click(function(){
