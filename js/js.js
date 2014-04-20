@@ -36,14 +36,14 @@ $(document).ready(function() {
 	var contentGist = gist.files.sitemap.content;
 	var urlPost = ('\nhttp://www.enmexicoserinocentenobasta.tk/' + postUrl);
 	var sitemap = contentGist + urlPost;
-		var delta = {
+	});
+	var delta = {
 		  "files": {
 			"sitemap": {
 			  "content": sitemap
 			}
 		  }
 		};
-	});
 	gist.update(delta, function(err, gist) {
 	});
 	var fecha = curr_year + "-" + curr_month + "-" + curr_date;
