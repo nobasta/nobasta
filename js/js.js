@@ -18,7 +18,7 @@ $(document).ready(function() {
 		});
 	});
 	
-	var sitemap, curr_date, curr_month, date, curr_year, gistFile, urlPost, gist, repo, postUrl, fecha, github;
+	var curr_date, curr_month, date, curr_year, gistFile, urlPost, gist, repo, postUrl, fecha, github;
 	function postEntry (title , content) {
 	github = new Github({
 	  username: "another-",
