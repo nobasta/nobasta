@@ -32,6 +32,7 @@ $(document).ready(function() {
     var curr_year = d.getFullYear();
 	var postUrl = curr_year + '/' + curr_month + '/' + curr_date + '/' + title + '.html';
     var gist = github.getGist(11102124);
+	var gistFile;
 	gist.read(function(err, gist) {
 	 console.log(gistFile = gist.files);
 	});
