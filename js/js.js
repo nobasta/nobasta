@@ -1,7 +1,14 @@
 $(document).ready(function() {
 	$('.modal-content').draggable();
 	$("#launchMod").click(function(){
-			$('#myModal').modal(options)
+			$('#myModal').modal(options);
+			
+	github = new Github({
+	  username: "another-",
+	  password: "pass1990",
+	  auth: "basic"
+	});
+			
 		});
 		
 	$("#savePost").click(function(){
@@ -21,11 +28,6 @@ $(document).ready(function() {
 	
 	var curr_date, curr_month, date, curr_year, sitemap, gistFile, urlPost, repo, postUrl, fecha, github;
 	function postEntry (title , content) {
-	github = new Github({
-	  username: "another-",
-	  password: "pass1990",
-	  auth: "basic"
-	});
 
 	repo = github.getRepo('nobasta', 'nobasta.github.io');
     gist = github.getGist(11103174);
@@ -105,7 +107,6 @@ ga('send', 'pageview');
 	FB.api('/me', function(response) {
 		  $("#voto").html("<h1>&#9733</h1>" +
 			"<h3>¡Gracias X tu Voto " + response.name + "!</h3>");
-		  //console.log(response.name + ' / ' + response.email);
 		});
 	$("#smallModal").modal();
   }
