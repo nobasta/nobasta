@@ -28,7 +28,7 @@ $(document).ready(function() {
 	var sitemap, curr_date, curr_month, date, curr_year, gistFile, urlPost, gist, repo, postUrl, delta, fecha;
 	
 	repo = github.getRepo('nobasta', 'nobasta.github.io');
-    gist = github.getGist(11102124);
+    gist = github.getGist(11102869);
 	gist.read(function(err, gist) {
 	date = new Date();
     curr_date = date.getDate();
