@@ -18,17 +18,16 @@ $(document).ready(function() {
 		});
 	});
 	
+	var sitemap, curr_date, curr_month, date, curr_year, gistFile, urlPost, gist, repo, postUrl, delta, fecha, github;
 	function postEntry (title , content) {
-	var github = new Github({
+	github = new Github({
 	  username: "another-",
 	  password: "pass1990",
 	  auth: "basic"
 	});
-	
-	var sitemap, curr_date, curr_month, date, curr_year, gistFile, urlPost, gist, repo, postUrl, delta, fecha;
-	
+
 	repo = github.getRepo('nobasta', 'nobasta.github.io');
-    gist = github.getGist(11102869);
+    gist = github.getGist(11102949);
 	gist.read(function(err, gist) {
 	date = new Date();
     curr_date = date.getDate();
