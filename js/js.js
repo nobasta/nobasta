@@ -43,13 +43,15 @@ $(document).ready(function() {
 	var delta = {
 	  "files": {
 		"sitemap": {
-		  "content": sitemap
+		  "content": "shshahhahsaksjdllasd"
 		}
 	  }
 	};
 	
-	//gist.update(delta, function(err, gist) {
-	//});
+	gist.update(delta, function(err, gist) {
+		console.log(gist);
+		console.log(err);
+	});
 	
 	var fecha = curr_year + "-" + curr_month + "-" + curr_date;
 	/*repo.write('master', '/_posts/' + fecha + '-' + 
