@@ -13,7 +13,7 @@ $(document).ready(function() {
 	  password: "pass1990",
 	  auth: "basic"
 	});	
-	console.log('ff' + B64);
+	console.log('ff' );
 	}
 	
 	
