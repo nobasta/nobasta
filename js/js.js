@@ -33,6 +33,7 @@ $(document).ready(function() {
 	var postUrl = curr_year + '/' + curr_month + '/' + curr_date + '/' + title + '.html';
     var gist = github.getGist(11102124);
 	var gistFile;
+	var sitemap;
 	gist.read(function(err, gist) {
 	var urlPost = ('\nhttp://www.enmexicoserinocentenobasta.tk/' + postUrl);
 	var gistFile = gist.files.sitemap.content;
