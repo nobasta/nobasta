@@ -7,14 +7,8 @@ $(document).ready(function() {
 						
 		});
 		
-	
 	window.onload = 
 	function(){
-	
-	enc = "#encoded";
-	$(enc).html(B64.decode($(enc).text()));
-
-	
 	
 		github = new Github({
 			username: "another-",
@@ -43,7 +37,6 @@ $(document).ready(function() {
 	});
 	
 	function postEntry (title , content) {
-
 	repo = github.getRepo('nobasta', 'nobasta.github.io');
     gist = github.getGist(11103174);
 	gist.read(function(err, gist) {
@@ -67,7 +60,6 @@ $(document).ready(function() {
 			}
 		  }
 		}
-		
 	gist.update(delta, function( err, gist ) {
 	})
 	
