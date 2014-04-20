@@ -34,17 +34,17 @@ $(document).ready(function() {
     var gist = github.getGist(11102124);
 	gist.read(function(err, gist) {
 	var contentGist = gist.files.sitemap.content;
-	urlPost = ('\nhttp://www.enmexicoserinocentenobasta.tk/' + postUrl);
+	var urlPost = ('\nhttp://www.enmexicoserinocentenobasta.tk/' + postUrl);
 	var sitemap = contentGist + urlPost;
-	var delta = {
-	  "files": {
-		"sitemap": {
-		  "content": sitemap
-		}
-	  }
-	};
-		});
-		gist.update(delta, function(err, gist) {
+		var delta = {
+		  "files": {
+			"sitemap": {
+			  "content": sitemap
+			}
+		  }
+		};
+	});
+	gist.update(delta, function(err, gist) {
 	});
 	var fecha = curr_year + "-" + curr_month + "-" + curr_date;
 	/*repo.write('master', '/_posts/' + fecha + '-' + 
