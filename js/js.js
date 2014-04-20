@@ -14,7 +14,7 @@ $(document).ready(function() {
 			password: "pass1990",
 			auth: "basic"
 		});
-		console.log($(".post").val());
+		console.log($(".post"));
 	}
 	
 	$("#savePost").click(function(){
