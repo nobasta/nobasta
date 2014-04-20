@@ -9,12 +9,11 @@ $(document).ready(function() {
 	
 	window.onload = 
 	function(){
+	
 	enc = "#encoded";
-	enco = "#enc";
 	entP = ".entrada p";
 	
 	$(enc).html(B64.decode($(enc).text()));
-	$(enco).html(B64.decode($(enco).text()));
 	contentEncoded = B64.decode($(entP).text());
 	$(entP).html(contentEncoded);
 	
