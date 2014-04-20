@@ -30,6 +30,7 @@ $(document).ready(function() {
     gist = github.getGist(11103174);
 	gist.read(function(err, gist) {
 		gistFile = gist.files.sitemap.content;
+		console.log(gistFile);
 	});
 	
 	date = new Date();
