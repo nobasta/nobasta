@@ -25,6 +25,7 @@ $(document).ready(function() {
 	  auth: "basic"
 	});
 	var sitemap;
+	var contentGist;
 	var repo = github.getRepo('nobasta', 'nobasta.github.io');
 	var d = new Date();
     var curr_date = d.getDate();
