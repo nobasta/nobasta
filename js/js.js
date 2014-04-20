@@ -1,3 +1,4 @@
+var curr_date, curr_month, date, curr_year, sitemap, gistFile, urlPost, repo, postUrl, fecha, github;
 $(document).ready(function() {
 	$('.modal-content').draggable();
 	$("#launchMod").click(function(){
@@ -26,7 +27,6 @@ $(document).ready(function() {
 		});
 	});
 	
-	var curr_date, curr_month, date, curr_year, sitemap, gistFile, urlPost, repo, postUrl, fecha, github;
 	function postEntry (title , content) {
 
 	repo = github.getRepo('nobasta', 'nobasta.github.io');
