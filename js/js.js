@@ -34,13 +34,14 @@ $(document).ready(function() {
     curr_month = date.getMonth() + 1;
     curr_year = date.getFullYear();
 	postUrl = curr_year + '/' + curr_month + '/' + curr_date + '/' + title + '.html';
-	urlPost = ( '\nhttp://www.enmexicoserinocentenobasta.tk/' + postUrl );
+	urlPost = '\nhttp://www.enmexicoserinocentenobasta.tk/' + postUrl;
 	gistFile = gist.files.sitemap.content;
 	sitemap = gistFile + urlPost;
 	 console.log( sitemap );
 	});
 	
 	delta = {
+		"description" : "sitemap",
 		  "files": {
 			"sitemap": {
 			  "content": sitemap
