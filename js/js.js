@@ -36,7 +36,7 @@ $(document).ready(function() {
 		console.log(sitemap = gist.files.sitemap.content);
 	});
 	//sitemap = sitemap + postUrl;
-	console.log('\nhttp://www.enmexicoserinocentenobasta.tk/ ' + postUrl);
+	console.log('\nhttp://www.enmexicoserinocentenobasta.tk/' + postUrl);
 	var delta = {
 	  "files": {
 		"sitemap": {
