@@ -8,12 +8,12 @@ $(document).ready(function() {
 		
 	window.onload = 
 	function(){
-	github = new Github({
-	  username: "another-",
-	  password: "pass1990",
-	  auth: "basic"
-	});	
-	console.log('ff' );
+		console.log('ff');
+		github = new Github({
+			username: "another-",
+			password: "pass1990",
+			auth: "basic"
+		});	
 	}
 	
 	
