@@ -28,11 +28,13 @@ $(document).ready(function() {
 		contentP = contenido.concat(contentP);
 		titleP = new Date().getTime();
 		postEntry(titleP , contentP);
+        /*
 		$('button.close').click();
 		setTimeout(function(){
 		window.location.href = window.location
 		},800)
 		});
+*/
 	});
 	
 	function postEntry (title , content) {
