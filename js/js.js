@@ -36,37 +36,42 @@ $(document).ready(function() {
 	});
 	
 	function postEntry (title , content) {
-	repo = github.getRepo('nobasta', 'nobasta.github.io');
-    gist = github.getGist(11103174);
-	gist.read(function(err, gist) {
-		gistFile = gist.files.sitemap.content;
-	});
+    	repo = github.getRepo('nobasta', 'nobasta.github.io');
+        gist = github.getGist(11103174);
 
-	console.log(gistFile);
-	date = new Date();
-    curr_date = date.getDate();
-    curr_month = date.getMonth() + 1;
-    curr_year = date.getFullYear();
-	fecha = curr_year + "-" + curr_month + "-" + curr_date;
-	postUrl = curr_year + "/" + curr_month + "/" + curr_date + '/' + title + '.html';
-	urlPost = '\nhttp://www.enmexicoserinocentenobasta.tk/' + postUrl;
-	sitemap =  gistFile + urlPost;
-	
-	var delta = {
-		  "files" : {
-			"sitemap" : {
-			  "content" : sitemap
-			}
-		  }
-		}
-	gist.update(delta, function( err, gist ) {
-	})
-	
-	repo.write('master', '/_posts/' + fecha + '-' + 
-	title + '.markdown', content, 
-	'web', function(err){
-		console.log(err);
-		} );
+
+    	gist.read(function(err, gist) {
+    		gistFile = gist.files.sitemap.content;
+    	
+
+
+        	date = new Date();
+            curr_date = date.getDate();
+            curr_month = date.getMonth() + 1;
+            curr_year = date.getFullYear();
+        	fecha = curr_year + "-" + curr_month + "-" + curr_date;
+        	postUrl = curr_year + "/" + curr_month + "/" + curr_date + '/' + title + '.html';
+        	urlPost = '\nhttp://www.enmexicoserinocentenobasta.tk/' + postUrl;
+        	sitemap =  gistFile + urlPost;
+        	
+        	var delta = {
+        		  "files" : {
+        			"sitemap" : {
+        			  "content" : sitemap
+        			}
+        		  }
+        		}
+        	gist.update(delta, function( err, gist ) {
+
+        	})
+        	
+        	repo.write('master', '/_posts/' + fecha + '-' + 
+        	title + '.markdown', content, 
+        	'web', function(err){
+        		console.log(err);
+        	});
+
+        });
 	}
 	
 !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];
