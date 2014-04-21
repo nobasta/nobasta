@@ -9,7 +9,15 @@ $(document).ready(function() {
 		
 	window.onload = 
 	function(){
-		github = new Github({
+	
+	/* como $("#encoded")[1], etc... */
+	
+	encoded = $("#encoded").text();
+	encoded = B64.decode(encoded);
+	$("#encoded").html(encoded);
+	
+	
+	github = new Github({
 			username: "another-",
 			password: "pass1990",
 			auth: "basic"
@@ -34,7 +42,7 @@ $(document).ready(function() {
 		setTimeout(function(){
 		  window.location.href = window.location
 		},800);
-*/
+		*/
 
 		});
 
