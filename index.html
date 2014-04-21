@@ -9,7 +9,7 @@ title: Basta México
 		<li>
 			<h3>
 				<a href="{{ post.url }}">
-					{{ post.title }}
+					{{ post.title | decode }}
 				</a>
 			</h3>
 			<p>
@@ -18,7 +18,7 @@ title: Basta México
 				</small>
 			</p>
 			<div class="entrada">
-				{{ post.content }}
+				{{ post.content | deco }}
 			</div> 
 		</li>
 	{% endfor %}
