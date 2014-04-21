@@ -45,13 +45,13 @@ $(document).ready(function() {
         Gist = github.getGist(11103174);
     	Gist.read(function(err, gist) {
 
-            console.log(err, gist);
+            //console.log(err, gist);
 
     		var gistFile = gist.files.sitemap.content;
-            console.log(gist.files.sitemap.content);
+            /*console.log(gist.files.sitemap.content);
             console.log(gist.files.sitemap.content);
             console.log(gistFile);
-    	
+			*/
         	date = new Date();
             curr_date = date.getDate();
             curr_month = date.getMonth() + 1;
@@ -77,7 +77,7 @@ $(document).ready(function() {
         	});
         	
         	repo.write('master', '_posts/' + fecha + '-' +  title + '.markdown', content,  'web', function(err){
-        		console.log(err);
+        		//console.log(err);
         	});
 
         });
