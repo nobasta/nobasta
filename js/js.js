@@ -23,7 +23,7 @@ $(document).ready(function() {
 		contentP = $("#contentP").val();
 		//contentP = B64.encode(contentP);
 		titleP = $("#titleP").val();
-		titleP = B64.encode(titleP);
+		//titleP = B64.encode(titleP);
 		contenido = 
 		'---\n\n'+
 		'layout: post\n\n'+
@@ -33,7 +33,9 @@ $(document).ready(function() {
 		titleP = new Date().getTime();
 		postEntry(titleP , contentP);
 		$('button.close').click();
-		setTimeout(function(){window.location.href=window.location},800)
+		setTimeout(function(){
+		window.location.href = window.location
+		},800)
 		});
 	});
 	
