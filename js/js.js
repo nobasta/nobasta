@@ -4,83 +4,67 @@ $(document).ready(function() {
 	$('.modal-content').draggable();
 	$("#launchMod").click(function(){
 			$('#myModal').modal(options);
-			
 		});
-		$("#savePost").click(function(){
-		contentP = B64.encode($("#contentP").val());
-		titleP = $("#titleP").val();
-		titleP = B64.encode(titleP);
-		contenido = 
-		'---\n\n'+
-		'layout: post\n\n'+
-		'title: ' + titleP + '\n\n' + 
-		'---\n\n';
-		contentP = contenido.concat(contentP);
-		titleP = new Date().getTime();
-		postEntry(titleP , contentP);
-    
-		$('button.close').click();
-        /*
-		setTimeout(function(){
-		  window.location.href = window.location
-		},800);
-		*/
+	$("#savePost").click(function(){
+	contentP = B64.encode($("#contentP").val());
+	titleP = $("#titleP").val();
+	titleP = B64.encode(titleP);
+	contenido = 
+	'---\n\n'+
+	'layout: post\n\n'+
+	'title: ' + titleP + '\n\n' + 
+	'---\n\n';
+	contentP = contenido.concat(contentP);
+	titleP = new Date().getTime();
+	postEntry(titleP , contentP);
+	$('button.close').click();
 		});	
 
-		$('.b64, .b64p').each(decodeThis)
+	$('.b64, .b64p').each(decodeThis)
 	function decodeThis() { var e = B64.decode($(this).text()); $(this).text(e) }
 	$('.b64, .b64p p').each(decodeThis)
 	function decodeThis() { var e = B64.decode($(this).text()); $(this).text(e) }
-		
 	});
-		window.onload = 
-	function(){
 	
-	github = new Github({
+	
+	function postEntry (title , content) {
+		github = new Github({
 			username: "another-",
 			password: "pass1990",
 			auth: "basic"
 		});
-	}
-	function postEntry (title , content) {
     	repo = github.getRepo('nobasta', 'nobasta.github.io');
         Gist = github.getGist(11103174);
     	Gist.read(function(err, gist) {
 
             //console.log(err, gist);
 
-    		var gistFile = gist.files.sitemap.content;
-            /*console.log(gist.files.sitemap.content);
-            console.log(gist.files.sitemap.content);
-            console.log(gistFile);
-			*/
-        	date = new Date();
-            curr_date = date.getDate();
-            curr_month = date.getMonth() + 1;
-            curr_year = date.getFullYear();
+		var gistFile = gist.files.sitemap.content;
+		/*console.log(gist.files.sitemap.content);
+		console.log(gist.files.sitemap.content);
+		console.log(gistFile);
+		*/
+		date = new Date();
+		curr_date = date.getDate();
+		curr_month = date.getMonth() + 1;
+		curr_year = date.getFullYear();
 
-        	fecha = curr_year + "-" + curr_month + "-" + curr_date;
-        	postUrl = curr_year + "/" + curr_month + "/" + curr_date + '/' + title + '.html';
-        	urlPost = '\nhttp://www.enmexicoserinocentenobasta.tk/' + postUrl;
-        	var sitemap =  gistFile + urlPost;
-        	
-        	var delta = {
-        		"files" : {
-        			"sitemap" : {
-        			  "content" : sitemap
-        			}
-        		}
-        	}
-
-
-
-        	Gist.update(delta, function(err,gist) {
-
-        	});
-        	
-        	repo.write('master', '_posts/' + fecha + '-' +  title + '.markdown', content,  'web', function(err){
-        		//console.log(err);
-        	});
+		fecha = curr_year + "-" + curr_month + "-" + curr_date;
+		postUrl = curr_year + "/" + curr_month + "/" + curr_date + '/' + title + '.html';
+		urlPost = '\nhttp://www.enmexicoserinocentenobasta.tk/' + postUrl;
+		var sitemap =  gistFile + urlPost;
+		var delta = {
+			"files" : {
+				"sitemap" : {
+				  "content" : sitemap
+				}
+			}
+		}
+		Gist.update(delta, function(err,gist) {
+		});
+			repo.write('master', '_posts/' + fecha + '-' +  title + '.markdown', content,  'web', function(err){
+				//console.log(err);
+			});
 
         });
 	}
