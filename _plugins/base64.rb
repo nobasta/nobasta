@@ -19,15 +19,12 @@ module Jekyll
 end
 
 Liquid::Template.register_tag('youtube', Jekyll::YouTubeTag)
- 
-Encoding::ISO_8859_1.name
 
 module Jekyll
   module Decode
     def decode(msg)
-      decoded = Base64.decode64(msg)
-	  decoded
-    end
+      decoded = Base64.encode64(msg)
+	 end
   end
 end
 
