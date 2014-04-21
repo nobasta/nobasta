@@ -1,6 +1,7 @@
-require "base64"
 require 'uri'
 require 'cgi'
+require 'base64'
+# encoding: ISO-8859-1
 
 module Jekyll
   class YouTubeTag < Liquid::Tag
@@ -18,19 +19,16 @@ module Jekyll
 end
 
 Liquid::Template.register_tag('youtube', Jekyll::YouTubeTag)
-
+ 
+Encoding::ISO_8859_1.name
 
 module Jekyll
-	class BaseDecode < Liquid::Tag
-		def initialize(tag_name, text, tokens)
-		super
-		@text = Base64.decode64(text)
-		end
-		
-		def render(context)
-		"//#{@text}"
-		end
-	end
+  module Decode
+    def decode(msg)
+      decoded = Base64.decode64(msg)
+	  decoded
+    end
+  end
 end
 
-Liquid::Template.register_tag('decode', Jekyll::BaseDecode)
+Liquid::Template.register_filter(Jekyll::Decode)
