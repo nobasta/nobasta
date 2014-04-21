@@ -20,8 +20,6 @@ $(document).ready(function() {
 	$('button.close').click();
 		});	
 
-	$('.b64, .b64p').each(decodeThis)
-	function decodeThis() { var e = B64.decode($(this).text()); $(this).text(e) }
 	$('.b64, .b64p p').each(decodeThis)
 	function decodeThis() { var e = B64.decode($(this).text()); $(this).text(e) }
 	});
