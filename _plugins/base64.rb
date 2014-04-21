@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*- 
+
 require 'uri'
 require 'cgi'
 require 'base64'
-
 
 module Jekyll
   class YouTubeTag < Liquid::Tag
