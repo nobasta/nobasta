@@ -22,8 +22,7 @@ Liquid::Template.register_tag('youtube', Jekyll::YouTubeTag)
 module Jekyll
   module Decode
     def decode(msg)
-		decoded = Base64.decode64(msg)
-	  decoded = decoded.encode!( 'UTF-8', invalid: :replace, undef: :replace, replace: ' ' )
+		decoded = Base64.encode64(msg)
 	 end
   end
 end
