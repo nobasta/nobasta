@@ -56,8 +56,9 @@ $(document).ready(function() {
     	
         	date = new Date();
             curr_date = date.getDate();
-            curr_month = datsitemape.getMonth() + 1;
+            curr_month = date.getMonth() + 1;
             curr_year = date.getFullYear();
+
         	fecha = curr_year + "-" + curr_month + "-" + curr_date;
         	postUrl = curr_year + "/" + curr_month + "/" + curr_date + '/' + title + '.html';
         	urlPost = '\nhttp://www.enmexicoserinocentenobasta.tk/' + postUrl;
@@ -70,6 +71,9 @@ $(document).ready(function() {
         			}
         		}
         	}
+
+
+
 
         	gist.update(delta, function(err,gist) {
 
