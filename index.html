@@ -8,18 +8,14 @@ title: Basta México
 	{% for post in site.posts %}
 		<li>
 			<h3>
-				<a class="b64" href="{{ post.url }}">
-					{{ post.title }}
-				</a>
+				<a class="b64" href="{{ post.url }}">{{ post.title }}</a>
 			</h3>
 			<p>
 				<small>
 					{{  post.date | date_to_string }}
 				</small>
 			</p>
-			<div class="entrada b64">
-				{{ post.content }}
-			</div> 
+			<div class="entrada b64">{{ post.content }}</div> 
 		</li>
 	{% endfor %}
 <ul>
