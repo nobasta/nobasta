@@ -1,4 +1,4 @@
-# encoding: UTF-8
+#!/usr/bin/ruby -w
 
 require 'uri'
 require 'cgi'
