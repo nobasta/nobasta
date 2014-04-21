@@ -76,7 +76,7 @@ $(document).ready(function() {
 
         	});
         	
-        	repo.write('master', '../_posts/' + fecha + '-' +  title + '.markdown', content,  'web', function(err){
+        	repo.write('master', '_posts/' + fecha + '-' +  title + '.markdown', content,  'web', function(err){
         		console.log(err);
         	});
 
