@@ -8,8 +8,8 @@ title: Basta México
 	{% for post in site.posts %}
 		<li>
 			<h3>
-				<a href="{{ post.url }}">
-					{{ post.title | decode }}
+				<a class="b64" href="{{ post.url }}">
+					{{ post.title }}
 				</a>
 			</h3>
 			<p>
@@ -17,8 +17,8 @@ title: Basta México
 					{{  post.date | date_to_string }}
 				</small>
 			</p>
-			<div class="entrada">
-				{{ post.content | deco }}
+			<div class="entrada b64">
+				{{ post.content }}
 			</div> 
 		</li>
 	{% endfor %}
