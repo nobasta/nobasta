@@ -1,6 +1,8 @@
+# -*- coding: utf-8 -*- 
 require 'uri'
 require 'cgi'
 require 'base64'
+
 
 module Jekyll
   class YouTubeTag < Liquid::Tag
@@ -22,7 +24,8 @@ Liquid::Template.register_tag('youtube', Jekyll::YouTubeTag)
 module Jekyll
   module Decode
     def decode(msg)
-		decoded = Base64.encode64(msg)
+		decoded = Base64.decode64(msg)
+		decoded = decoded.force_encoding('UTF-8').inspect.replace("\","")
 	 end
   end
 end
