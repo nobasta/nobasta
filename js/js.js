@@ -33,6 +33,7 @@ $(document).ready(function() {
 		titleP = new Date().getTime();
 		postEntry(titleP , contentP);
 		$('button.close').click();
+		setTimeout(function(){window.location.href=window.location},800)
 		});
 	});
 	
