@@ -49,7 +49,7 @@ $(document).ready(function() {
 
             console.log(err, gist);
 
-    		var = gistFile = gist.files.sitemap.content;
+    		var gistFile = gist.files.sitemap.content;
             console.log(gist.files.sitemap.content);
             console.log(gist.files.sitemap.content);
             console.log(gistFile);
