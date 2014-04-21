@@ -42,9 +42,9 @@ $(document).ready(function() {
 
     	gist.read(function(err, gist) {
     		gistFile = gist.files.sitemap.content;
+
+            console.log(gistFile);
     	
-
-
         	date = new Date();
             curr_date = date.getDate();
             curr_month = date.getMonth() + 1;
