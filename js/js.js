@@ -42,10 +42,8 @@ $(document).ready(function() {
 	
 	function postEntry (title , content) {
     	repo = github.getRepo('nobasta', 'nobasta.github.io');
-        gist = github.getGist(11103174);
-
-
-    	gist.read(function(err, gist) {
+        Gist = github.getGist(11103174);
+    	Gist.read(function(err, gist) {
 
             console.log(err, gist);
 
@@ -74,8 +72,7 @@ $(document).ready(function() {
 
 
 
-
-        	gist.update(delta, function(err,gist) {
+        	Gist.update(delta, function(err,gist) {
 
         	});
         	
