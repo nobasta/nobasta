@@ -1,6 +1,5 @@
 name: Basta México
 markdown: redcarpet
 pygments: true
-gems: [base64.rb]
-plugins:     ./_plugins
+plugins: _plugins
 encoding: UTF-8
