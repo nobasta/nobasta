@@ -68,7 +68,7 @@
 		<button class="btn btn-default" style="background-color:white;color:RoyalBlue" id="votos"></button>
 	</div>
 	<div class="blog">
-		{{ content }}
+		→ {{ content  }}
 	</div>
 	<div class="results">
 		<div class="search-title">Entradas Recientes</div>
@@ -76,6 +76,9 @@
 				<ul class="posts">
 					{% for post in site.posts %}
 					<li>
+						<a href="{{ post.url }}">
+							{{ post.title | decode }}
+						</a>
 						<small>
 							<small>
 								<span>
@@ -86,9 +89,6 @@
 									→
 							</small>
 						</small>
-						<a href="{{ post.url }}">
-							{{ post.title | decode }}
-						</a>
 					</li>
 					{% endfor %}
 				</ul>
