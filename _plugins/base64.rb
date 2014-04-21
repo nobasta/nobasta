@@ -29,3 +29,14 @@ module Jekyll
 end
 
 Liquid::Template.register_filter(Jekyll::Decode)
+
+module Jekyll
+  module DC
+    def deco(msg)
+		decoded = Base64.decode64(msg)
+		decoded = decoded.force_encoding('UTF-8').inspect
+	 end
+  end
+end
+
+Liquid::Template.register_filter(Jekyll::DC)
