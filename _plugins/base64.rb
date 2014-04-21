@@ -37,7 +37,6 @@ module Jekyll
     def deco(msg)
 		decoded = Base64.decode64(msg)
 		decoded = decoded.force_encoding('UTF-8').inspect
-		"nada nada"
 	 end
   end
 end
