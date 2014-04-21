@@ -4,24 +4,14 @@ $(document).ready(function() {
 	$('.modal-content').draggable();
 	$("#launchMod").click(function(){
 			$('#myModal').modal(options);
+			
 		});
 
 	$('.b64, b64p').each(decodeThis)
 	function decodeThis() { var e = B64.decode($(this).text()); $(this).text(e) }
 	$('.b64, b64p p').each(decodeThis)
 	function decodeThis() { var e = B64.decode($(this).text()); $(this).text(e) }
-			
-	window.onload = 
-	function(){
-	
-	github = new Github({
-			username: "another-",
-			password: "pass1990",
-			auth: "basic"
-		});
-	}
-	
-	$("#savePost").click(function(){
+		$("#savePost").click(function(){
 		contentP = B64.encode($("#contentP").val());
 		titleP = $("#titleP").val();
 		titleP = B64.encode(titleP);
@@ -41,10 +31,18 @@ $(document).ready(function() {
 		},800);
 		*/
 
-		});
+		});	
 
 	});
+		window.onload = 
+	function(){
 	
+	github = new Github({
+			username: "another-",
+			password: "pass1990",
+			auth: "basic"
+		});
+	}
 	function postEntry (title , content) {
     	repo = github.getRepo('nobasta', 'nobasta.github.io');
         Gist = github.getGist(11103174);
