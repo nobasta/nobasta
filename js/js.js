@@ -1,4 +1,4 @@
-var curr_date, curr_month, date, curr_year, sitemap, gistFile, urlPost, repo, postUrl, fecha, github;
+var curr_date, curr_month, date, curr_year, sitemap, urlPost, repo, postUrl, fecha, github;
 
 $(document).ready(function() {
 	$('.modal-content').draggable();
@@ -48,10 +48,11 @@ $(document).ready(function() {
     	gist.read(function(err, gist) {
 
             console.log(err, gist);
-            
-    		gistFile = gist.files.sitemap.content;
+
+    		var = gistFile = gist.files.sitemap.content;
             console.log(gist.files.sitemap.content);
             console.log(gist.files.sitemap.content);
+            console.log(gistFile);
     	
         	date = new Date();
             curr_date = date.getDate();
