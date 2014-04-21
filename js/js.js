@@ -9,7 +9,6 @@ $(document).ready(function() {
 		
 	window.onload = 
 	function(){
-	
 		github = new Github({
 			username: "another-",
 			password: "pass1990",
