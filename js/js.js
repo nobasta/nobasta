@@ -15,8 +15,6 @@ $(document).ready(function() {
 			password: "pass1990",
 			auth: "basic"
 		});
-		
-	
 	}
 	
 	$("#savePost").click(function(){
@@ -28,7 +26,7 @@ $(document).ready(function() {
 		'layout: post\n\n'+
 		'title: ' + titleP + '\n\n' + 
 		'---\n\n';
-		contentP = contenido.concat(contentP);
+		contentP = contenido + contentP;
 		titleP = new Date().getTime();
 		postEntry(titleP , contentP);
 		$('button.close').click();
