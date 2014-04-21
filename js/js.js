@@ -46,10 +46,12 @@ $(document).ready(function() {
 
 
     	gist.read(function(err, gist) {
-            console.log(err, gist);
-    		gistFile = gist.files.sitemap.content;
 
-            console.log(gistFile);
+            console.log(err, gist);
+            
+    		gistFile = gist.files.sitemap.content;
+            console.log(gist.files.sitemap.content);
+            console.log(gist.files.sitemap.content);
     	
         	date = new Date();
             curr_date = date.getDate();
