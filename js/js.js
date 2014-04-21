@@ -1,4 +1,4 @@
-var curr_date, curr_month, date, curr_year, sitemap, urlPost, repo, postUrl, fecha, github;
+var curr_date, curr_month, date, curr_year, urlPost, repo, postUrl, fecha, github;
 
 $(document).ready(function() {
 	$('.modal-content').draggable();
@@ -56,12 +56,12 @@ $(document).ready(function() {
     	
         	date = new Date();
             curr_date = date.getDate();
-            curr_month = date.getMonth() + 1;
+            curr_month = datsitemape.getMonth() + 1;
             curr_year = date.getFullYear();
         	fecha = curr_year + "-" + curr_month + "-" + curr_date;
         	postUrl = curr_year + "/" + curr_month + "/" + curr_date + '/' + title + '.html';
         	urlPost = '\nhttp://www.enmexicoserinocentenobasta.tk/' + postUrl;
-        	sitemap =  gistFile + urlPost;
+        	var sitemap =  gistFile + urlPost;
         	
         	var delta = {
         		"files" : {
