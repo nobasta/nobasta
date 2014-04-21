@@ -41,6 +41,7 @@ $(document).ready(function() {
 
 
     	gist.read(function(err, gist) {
+            console.log(err, gist);
     		gistFile = gist.files.sitemap.content;
 
             console.log(gistFile);
@@ -55,19 +56,18 @@ $(document).ready(function() {
         	sitemap =  gistFile + urlPost;
         	
         	var delta = {
-        		  "files" : {
+        		"files" : {
         			"sitemap" : {
         			  "content" : sitemap
         			}
-        		  }
         		}
-        	gist.update(delta, function( err, gist ) {
+        	}
 
-        	})
+        	gist.update(delta, function(err,gist) {
+
+        	});
         	
-        	repo.write('master', '/_posts/' + fecha + '-' + 
-        	title + '.markdown', content, 
-        	'web', function(err){
+        	repo.write('master', '/_posts/' + fecha + '-' +  title + '.markdown', content,  'web', function(err){
         		console.log(err);
         	});
 
