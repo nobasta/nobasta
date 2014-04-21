@@ -4,18 +4,12 @@ $(document).ready(function() {
 	$('.modal-content').draggable();
 	$("#launchMod").click(function(){
 			$('#myModal').modal(options);
-						
 		});
-		
+
+	$('.b64').each(function() { var e = B64.decode($(this).text()); $(this).text(e) })
+			
 	window.onload = 
 	function(){
-	
-	/* como $("#encoded")[1], etc... */
-	
-	encoded = $("#encoded").text();
-	encoded = B64.decode(encoded);
-	$("#encoded").html(encoded);
-	
 	
 	github = new Github({
 			username: "another-",
