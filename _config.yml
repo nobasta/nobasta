@@ -2,3 +2,4 @@ name: Basta México
 markdown: redcarpet
 pygments: true
 gems: [base64]
+encoding: UTF-8
