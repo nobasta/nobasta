@@ -6,11 +6,6 @@ $(document).ready(function() {
 			$('#myModal').modal(options);
 			
 		});
-
-	$('.b64, b64p').each(decodeThis)
-	function decodeThis() { var e = B64.decode($(this).text()); $(this).text(e) }
-	$('.b64, b64p p').each(decodeThis)
-	function decodeThis() { var e = B64.decode($(this).text()); $(this).text(e) }
 		$("#savePost").click(function(){
 		contentP = B64.encode($("#contentP").val());
 		titleP = $("#titleP").val();
@@ -30,9 +25,13 @@ $(document).ready(function() {
 		  window.location.href = window.location
 		},800);
 		*/
-
 		});	
 
+		$('.b64, b64p').each(decodeThis)
+	function decodeThis() { var e = B64.decode($(this).text()); $(this).text(e) }
+	$('.b64, b64p p').each(decodeThis)
+	function decodeThis() { var e = B64.decode($(this).text()); $(this).text(e) }
+		
 	});
 		window.onload = 
 	function(){
