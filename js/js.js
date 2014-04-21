@@ -20,8 +20,7 @@ $(document).ready(function() {
 	}
 	
 	$("#savePost").click(function(){
-		contentP = $("#contentP").val();
-		contentP = B64.encode(contentP);
+		contentP = B64.encode($("#contentP").val());
 		titleP = $("#titleP").val();
 		titleP = B64.encode(titleP);
 		contenido = 
