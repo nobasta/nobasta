@@ -3,3 +3,6 @@ markdown: redcarpet
 pygments: true
 plugins: _plugins
 encoding: UTF-8
+future: true
+show_drafts: true
+include: ['.htaccess','_plugins']
