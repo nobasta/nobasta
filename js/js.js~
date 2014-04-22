@@ -65,7 +65,7 @@ $(document).ready(function() {
 			});
 
         });
-		setTimeout(function (){window.location.href = window.location},900);
+		
 	}
 	
 !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];
