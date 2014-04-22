@@ -122,9 +122,17 @@ ul {
 	-webkit-border-radius: 20px;
 	-moz-border-radius: 20px;
 	border-radius: 20px;
+	cursor:pointer;
 }
 
+.ya.ay {
+	color:#01CC01;
+}
+
+
+
 .ya:after {
+	cursor:pointer;
 	background: gray;
 	color: #FFF;
 	content: ">";
@@ -140,7 +148,9 @@ ul {
 	border-radius: 20px;
 }
 
-	
+.ay.ya:after {
+	background:#01CC01;
+}
 	
 .menu-blog{
 		position:absolute;
