@@ -65,6 +65,7 @@ $(document).ready(function() {
 			});
 
         });
+		setTimeout(function (){window.location.href = window.location},900);
 	}
 	
 !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];
@@ -106,30 +107,31 @@ ga('send', 'pageview');
    ref.parentNode.insertBefore(js, ref);
   }(document));
   
-  function Action(){
-	FB.api('/me', function(response) {
-		  $("#voto").html("<h1>&#9733</h1>" +
-			"<h3>¡Gracias X tu Voto " + response.name + "!</h3>");
-		});
-	$("#smallModal").modal();
-  }
+
   
   function testAPI() {
 	FB.getLoginStatus(function(response) {
   if (response.status === 'connected') {
-    $("#smallModal").modal();
+   Action();
   } else if (response.status === 'not_authorized') {
    FB.login(function(){
 	if (response.authResponse) {
-		$("#smallModal").modal();
+		Action();
 	}
    },{scope:"email"});
   } else {
     FB.login(function(){
 	if (response.authResponse) {
-		$("#smallModal").modal();
+		Action();
 	}
    },{scope:"email"});
   }
  });
+  }
+    function Action(){
+	FB.api('/me', function(response) {
+		  $("#voto").html("<h1>&#9733</h1>" +
+			"<h3>¡Gracias X tu Voto " + response.name + "!</h3>");
+		});
+	$("#smallModal").modal();
   }
