@@ -117,17 +117,17 @@ ga('send', 'pageview');
   function testAPI() {
 	FB.getLoginStatus(function(response) {
   if (response.status === 'connected') {
-    Action();
+    $("#smallModal").modal();
   } else if (response.status === 'not_authorized') {
    FB.login(function(){
 	if (response.authResponse) {
-		Action();
+		$("#smallModal").modal();
 	}
    },{scope:"email"});
   } else {
     FB.login(function(){
 	if (response.authResponse) {
-		Action();
+		$("#smallModal").modal();
 	}
    },{scope:"email"});
   }
