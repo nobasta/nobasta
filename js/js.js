@@ -6,10 +6,10 @@ $(document).ready(function() {
 			$('#myModal').modal(options);
 		});
 	$("#savePost").click(function(){
-	//contentP = B64.encode($("#contentP").val());
-	contentP = $("#contentP").val();	
+	contentP = B64.encode($("#contentP").val());
+	//contentP = $("#contentP").val();	
 	titleP = $("#titleP").val();
-	//titleP = B64.encode(titleP);
+	titleP = B64.encode(titleP);
 	contenido = 
 	'---\n\n'+
 	'layout: post\n\n'+
