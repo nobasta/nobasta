@@ -27,7 +27,7 @@ header {
 	}
 .content {
 		width:960px;
-		min-height:100%;
+		min-height:620px;
 		background-color:white;
 		margin-top:1px;
 	}
@@ -91,7 +91,7 @@ ul {
 		overflow-Y:scroll;
 		width:660px;
 		padding-right:50px;
-		height:620px;
+		height:100%;
 	}
 .entrada {
 		margin-bottom:50px;
