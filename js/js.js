@@ -26,6 +26,12 @@ var curr_date, curr_month, date, curr_year, urlPost, repo, postUrl, fecha, githu
 	//$('.b64, .b64p p').each(decodeThis)
 	$(".b64, .b64p p").each(unescapeThis);
 	
+
+	$(".entrada, .b64p p").text(function(index,text){
+	return text.substr(0, 500);
+	});
+	
+	
 	function unescapeThis(){var e = unescape($(this).text()); $(this).text(e);}
 	function decodeThis() { var e = B64.decode($(this).text()); $(this).text(e) }
 	});
