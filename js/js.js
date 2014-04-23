@@ -54,7 +54,7 @@ var curr_date, curr_month, date, curr_year, urlPost, repo, postUrl, fecha, githu
 
 		fecha = curr_year + "-" + curr_month + "-" + curr_date;
 		postUrl = curr_year + "/" + curr_month + "/" + curr_date + '/' + title + '.html';
-		urlPost = '\nhttp://www.enmexicoserinocentenobasta.tk/' + postUrl;
+		urlPost = '\nhttp://www.enmexicoserinocentenobasta.tk/bastamexico/' + postUrl;
 		var sitemap =  data + urlPost;
 		var delta = {
 			"files" : {
