@@ -1,0 +1,12 @@
+---
+
+layout: post
+
+title: %BFQu%E9%20es%20tortura%3F
+
+date:   2014-04-22 23:29:39
+
+categories: jekyll update
+
+---
+Tras%20la%202%AA%20Guerra%20Mundial%20todos%20los%20gobiernos%20del%20mundo%20asumieron%20el%20consenso%20de%20que%20la%20tortura%20y%20los%20malos%20tratos%20son%20pr%E1cticas%20repugnantes%2C%20detestables%20e%20inmorales%20as%ED%20lo%20plasmaron%20en%20la%20legislaci%F3n%20internacional.%20La%20Tortura%20no%20es%20admisible%20y%20nunca%20est%E1%20justificada%2C%20ni%20siquiera%20en%20guerras%20o%20situaciones%20de%20emergencia.%0A%0ATras%20el%2011%20de%20septiembre%20de%202001%2C%20ese%20consenso%20se%20ve%20amenazado.%20Miembros%20del%20Gobierno%20de%20EEUU%20creen%20que%20frente%20a%20la%20amenaza%20terrorista%20ya%20no%20pueden%20someterse%20a%20las%20normas%20previamente%20acordadas.%20%0A%0AE%20intentan%20justificar%20que%20mientras%20la%20tortura%20es%20inadmisible%20otras%20formas%20de%20malos%20tratos%20s%ED%20pueden%20ser%20tolerables.%20%0A%0APero%20%BFqu%E9%20es%20tortura%3F%0A%0ASeg%FAn%20la%20Convenci%F3n%20sobre%20la%20Tortura%20de%20las%20Naciones%20Unidas%20Tortura%20es%20infligir%20%20intencionadamente%20a%20una%20persona%20dolores%20o%20sufrimientos%20graves%2C%20ya%20sean%20f%EDsicos%20o%20mentales%2C%20con%20el%20fin%20de%20obtener%20informaci%F3n%20o%20una%20confesi%F3n%2C%20o%20de%20castigarla%2C%20intimidarla%20o%20coaccionarla.
