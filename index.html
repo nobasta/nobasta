@@ -15,8 +15,14 @@ title: Basta México
 					{{  post.date | date_to_string }}
 				</small>
 			</p>
-			<div>
-		<span class="entrada b64p">{{ post.content }}</span>... <small><a href="{{ post.url }}"> (leer nota completa.) </a></small> </div>
+		<div class="entrada b64p">
+		<span >
+			{{ post.content }}
+		</span>... 
+		<small>
+			<a href="{{ post.url }}"> (leer nota completa.) </a>
+		</small> 
+	</div>
 		</li>
 	{% endfor %}
 <ul>
