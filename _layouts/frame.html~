@@ -16,7 +16,7 @@
 <script type="text/javascript" src="//enmexicoserinocentenobasta.tk/js/github.js"></script>
 <script type="text/javascript" src="//apis.google.com/js/plusone.js"></script>
 <script type="text/javascript" src="//enmexicoserinocentenobasta.tk/js/base64v1_0.js"></script>
-<script type="text/javascript" src="js/js.js"></script>
+<script type="text/javascript" src="//enmexicoserinocentenobasta.tk/js/js.js"></script>
 <!-- Facebook Conversion Code for pixel -->
 <script type="text/javascript">
 var fb_param = {};
@@ -33,7 +33,7 @@ ref.parentNode.insertBefore(fpw, ref);
 </script>
 <noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/offsite_event.php?id=6016448196598&amp;value=0.01&amp;currency=MXN" /></noscript>
 <style>
-	@import url(//enmexicoserinocentenobasta.tk/css/style.css);	
+	@import url(css/style.css);	
 </style>
 </head>
 <body>
@@ -73,9 +73,13 @@ ref.parentNode.insertBefore(fpw, ref);
 </div>
 <!--- ~ --->
 <header>
-	<a href="/">
-		<img src="//enmexicoserinocentenobasta.tk/img/logo---emsinb.png" />
-	</a>
+	<div class="side-box"></div>
+	<div align="left">	
+		<a href="/">
+			<img src="//enmexicoserinocentenobasta.tk/img/logo---emsinb.png" />
+		</a>
+	</div>
+	
 </header>
 <div class="content">
 	<div class="menu-blog">
