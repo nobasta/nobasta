@@ -95,6 +95,7 @@ ul {
 	}
 .entrada {
 		margin-bottom:90px;
+		border-bottom:1px solid #f5f5f5;
 	}
 .meta small {
 		float:right;
