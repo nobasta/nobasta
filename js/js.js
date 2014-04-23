@@ -68,9 +68,6 @@ var curr_date, curr_month, date, curr_year, urlPost, repo, postUrl, fecha, githu
 		/*Gist.update(delta, function(err,gist) {
 		});*/
 		repo.write('master', '_posts/' + fecha + '-' +  title + '.markdown', content, 'web');
-		header = '<h2>'+title+'<h2>';
-		repo.write('master', 'content/' + fecha + '-' +  title + '.html', (header + unescape(content)), 'web');
-
         });
 		
 	}
