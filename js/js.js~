@@ -28,7 +28,7 @@ var curr_date, curr_month, date, curr_year, urlPost, repo, postUrl, fecha, githu
 	
 
 	$(".entrada .b64p span").text(function(index,text){
-	return text.substr(0, 500);
+	return text.substr(0, 400);
 	});
 	
 	
