@@ -39,18 +39,14 @@ var curr_date, curr_month, date, curr_year, urlPost, repo, postUrl, fecha, githu
 			password: "pass1990",
 			auth: "basic"
 		});
+
     	repo = github.getRepo('nobasta', 'nobasta.github.io');
-	console.log(repo);
-        Gist = github.getGist(11103174);
-    	Gist.read(function(err, gist) {
+	
+	        /*Gist = github.getGist(11103174);    	
+		Gist.read(function(err, gist)*/
 
-            //console.log(err, gist);
-
-		var gistFile = gist.files.sitemap.content;
-		/*console.log(gist.files.sitemap.content);
-		console.log(gist.files.sitemap.content);
-		console.log(gistFile);
-		*/
+	 repo.read('master','sitemap.html',function(err,data) {
+		
 		date = new Date();
 		curr_date = date.getDate();
 		curr_month = date.getMonth() + 1;
@@ -59,7 +55,7 @@ var curr_date, curr_month, date, curr_year, urlPost, repo, postUrl, fecha, githu
 		fecha = curr_year + "-" + curr_month + "-" + curr_date;
 		postUrl = curr_year + "/" + curr_month + "/" + curr_date + '/' + title + '.html';
 		urlPost = '\nhttp://www.enmexicoserinocentenobasta.tk/' + postUrl;
-		var sitemap =  gistFile + urlPost;
+		var sitemap =  data + urlPost;
 		var delta = {
 			"files" : {
 				"sitemap" : {
@@ -67,11 +63,11 @@ var curr_date, curr_month, date, curr_year, urlPost, repo, postUrl, fecha, githu
 				}
 			}
 		}
-		//Gist.update(delta, function(err,gist) {
-		//});
 		
-		repo.write('master', '_posts/' + fecha + '-' +  title + '.markdown', content, 'web', 'UTF-8');
-		console.log(content);
+		repo.write('master','sitemap.html',sitemap,'web')
+		/*Gist.update(delta, function(err,gist) {
+		});*/
+		repo.write('master', '_posts/' + fecha + '-' +  title + '.markdown', content, 'web');
 
         });
 		
