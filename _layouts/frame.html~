@@ -74,7 +74,7 @@ ref.parentNode.insertBefore(fpw, ref);
 <!--- ~ --->
 <header>
 	<div class="side-box">
-		<div>	<b>Publicidad</b>
+		<div style="margin:5px;">	<small><b>Publicidad</b> </small>
 			<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 			<!-- basta -->
 			<ins class="adsbygoogle"
