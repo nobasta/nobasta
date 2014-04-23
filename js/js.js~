@@ -1,38 +1,46 @@
 var curr_date, curr_month, date, curr_year, urlPost, repo, postUrl, fecha, github;
-
-$(document).ready(function() {
+	
+	$(document).ready(function() {
 	$('.modal-content').draggable();
 	$("#launchMod").click(function(){
 			$('#myModal').modal(options);
 		});
 	$("#savePost").click(function(){
-	contentP = B64.encode($("#contentP").val());
-	//contentP = $("#contentP").val();	
-	titleP = $("#titleP").val();
-	titleP = B64.encode(titleP);
+	//contentP = B64.encode($("#contentP").val());
+	contentP = escape($("#contentP").val());	
+	titleP = escape($("#titleP").val().replace(/\s+/, '\x01').split('\x01'));
+	//titleP = B64.encode(titleP);
 	contenido = 
 	'---\n\n'+
 	'layout: post\n\n'+
 	'title: ' + titleP + '\n\n' + 
-	'---\n\n';
-	contentP = contenido.concat(contentP);
+	'date:   2014-04-22 23:29:39\n\n' +
+	'categories: jekyll update\n\n' +
+	'---\n';
+	contentP = contenido + contentP;
 	titleP = new Date().getTime();
 	postEntry(titleP , contentP);
 	$('button.close').click();
 		});	
 
-	$('.b64, .b64p p').each(decodeThis)
+	//$('.b64, .b64p p').each(decodeThis)
+	$(".b64, .b64p p").each(unescapeThis);
+	
+	function unescapeThis(){ var e = unescape($(this).text()); $(this).text(e); }
 	function decodeThis() { var e = B64.decode($(this).text()); $(this).text(e) }
 	});
 	
 	
-	function postEntry (title , content) {
+	function postEntry (time , content) {	
+	
+	
 		github = new Github({
 			username: "another-",
 			password: "pass1990",
 			auth: "basic"
 		});
     	repo = github.getRepo('nobasta', 'nobasta.github.io');
+	console.log(repo);
         Gist = github.getGist(11103174);
     	Gist.read(function(err, gist) {
 
@@ -59,11 +67,11 @@ $(document).ready(function() {
 				}
 			}
 		}
-		Gist.update(delta, function(err,gist) {
-		});
-			repo.write('master', '_posts/' + fecha + '-' +  title + '.markdown', content,  'web', function(err){
-				//console.log(err);
-			});
+		//Gist.update(delta, function(err,gist) {
+		//});
+		
+		repo.write('master', '_posts/' + fecha + '-' +  time + '.markdown', content, 'web', 'UTF-8');
+		console.log(content);
 
         });
 		

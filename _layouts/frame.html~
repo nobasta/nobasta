@@ -16,7 +16,7 @@
 <script type="text/javascript" src="//enmexicoserinocentenobasta.tk/js/github.js"></script>
 <script type="text/javascript" src="//apis.google.com/js/plusone.js"></script>
 <script type="text/javascript" src="//enmexicoserinocentenobasta.tk/js/base64v1_0.js"></script>
-<script type="text/javascript" src="//enmexicoserinocentenobasta.tk/js/js.js"></script>
+<script type="text/javascript" src="js/js.js"></script>
 <!-- Facebook Conversion Code for pixel -->
 <script type="text/javascript">
 var fb_param = {};
@@ -31,18 +31,6 @@ var ref = document.getElementsByTagName('script')[0];
 ref.parentNode.insertBefore(fpw, ref);
 })();
 </script>
-<!-- Google Analytics -->
-<script>
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-ga('create', 'UA-XXXX-Y', 'auto');
-ga('send', 'pageview');
-
-</script>
-<!-- End Google Analytics -->
 <noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/offsite_event.php?id=6016448196598&amp;value=0.01&amp;currency=MXN" /></noscript>
 <style>
 	@import url(//enmexicoserinocentenobasta.tk/css/style.css);	

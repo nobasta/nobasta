@@ -1,0 +1,5 @@
+name: Basta México
+markdown: redcarpet
+pygments: true
+plugins: ./_plugins
+encoding: UTF-8

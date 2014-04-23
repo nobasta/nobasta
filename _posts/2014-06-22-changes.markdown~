@@ -1,0 +1,23 @@
+---
+layout: post
+title:  "Welcome to Jekyll!"
+date:   2014-04-22 23:29:39
+categories: jekyll update
+---
+
+<h2>Joven Golpeado</h2>
+
+{% highlight ruby %}
+def print_hi(name)
+  puts "Hi, #{name}"
+end
+print_hi('Tom')
+#=> prints 'Hi, Tom' to STDOUT.
+{% endhighlight %}
+
+<img src="https://scontent-a-lga.xx.fbcdn.net/hphotos-prn1/t1.0-9/p296x100/1620773_755092497836778_703870352_n.jpg" />
+
+Check out the [Jekyll docs][jekyll] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [UCS Company][jekyll-gh].
+
+[jekyll-gh]: http://unacasadesoftware.com
+[jekyll]:    http://jekyllrb.com
