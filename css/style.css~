@@ -91,7 +91,7 @@ ul {
 		overflow-Y:scroll;
 		width:660px;
 		padding-right:50px;
-		height:95%;
+		height:100%;
 	}
 .entrada {
 		margin-bottom:50px;
