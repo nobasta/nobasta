@@ -8,7 +8,7 @@ var curr_date, curr_month, date, curr_year, urlPost, repo, postUrl, fecha, githu
 	$("#savePost").click(function(){
 	//contentP = B64.encode($("#contentP").val());
 	contentP = escape($("#contentP").val());	
-	titleP = escape($("#titleP").val().replace(/\s+/, '\x01').split('\x01'));
+	titleP = escape($("#titleP").val());
 	//titleP = B64.encode(titleP);
 	contenido = 
 	'---\n\n'+
@@ -26,12 +26,12 @@ var curr_date, curr_month, date, curr_year, urlPost, repo, postUrl, fecha, githu
 	//$('.b64, .b64p p').each(decodeThis)
 	$(".b64, .b64p p").each(unescapeThis);
 	
-	function unescapeThis(){ var e = unescape($(this).text()); $(this).text(e); }
+	function unescapeThis(){var e = unescape($(this).text()); $(this).text(e);}
 	function decodeThis() { var e = B64.decode($(this).text()); $(this).text(e) }
 	});
 	
 	
-	function postEntry (time , content) {	
+	function postEntry (title , content) {	
 	
 	
 		github = new Github({
@@ -70,7 +70,7 @@ var curr_date, curr_month, date, curr_year, urlPost, repo, postUrl, fecha, githu
 		//Gist.update(delta, function(err,gist) {
 		//});
 		
-		repo.write('master', '_posts/' + fecha + '-' +  time + '.markdown', content, 'web', 'UTF-8');
+		repo.write('master', '_posts/' + fecha + '-' +  title + '.markdown', content, 'web', 'UTF-8');
 		console.log(content);
 
         });

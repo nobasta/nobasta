@@ -15,7 +15,7 @@ var curr_date, curr_month, date, curr_year, urlPost, repo, postUrl, fecha, githu
 	'layout: post\n\n'+
 	'title: ' + titleP + '\n\n' + 
 	'date:   2014-04-22 23:29:39\n\n' +
-	'categories: jekyll update\n\n' +
+	'categories: BastaMexico\n\n' +
 	'---\n';
 	contentP = contenido + contentP;
 	titleP = new Date().getTime();
