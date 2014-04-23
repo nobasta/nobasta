@@ -7,8 +7,8 @@ var curr_date, curr_month, date, curr_year, urlPost, repo, postUrl, fecha, githu
 		});
 	$("#savePost").click(function(){
 	//contentP = B64.encode($("#contentP").val());
-	contentP = ($("#contentP").val());	
-	titleP = ($("#titleP").val());
+	contentP = escape($("#contentP").val());	
+	titleP = escape($("#titleP").val());
 	//titleP = B64.encode(titleP);
 	contenido = 
 	'---\n\n'+
