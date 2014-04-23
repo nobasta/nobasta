@@ -31,7 +31,7 @@ header img {
 .side-box {
 		width:260px;	
 		height:272px;
-		background-color:#F08080;
+		background-color:rgba(0,0,0,0);
 		position:absolute;
 		float:right;
 		margin:10px 10px -20px 210px;

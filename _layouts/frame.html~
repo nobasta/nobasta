@@ -73,7 +73,20 @@ ref.parentNode.insertBefore(fpw, ref);
 </div>
 <!--- ~ --->
 <header>
-	<div class="side-box"></div>
+	<div class="side-box">
+		<div>	<b>Publicidad</b>
+			<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+			<!-- basta -->
+			<ins class="adsbygoogle"
+			     style="display:inline-block;width:250px;height:250px"
+			     data-ad-client="ca-pub-6446555734512562"
+			     data-ad-slot="1056919133">
+			</ins>
+			<script>
+				(adsbygoogle = window.adsbygoogle || []).push({});
+			</script>
+		</div>
+	</div>
 	<div align="left">	
 		<a href="/">
 			<img src="//enmexicoserinocentenobasta.tk/img/logo---emsinb.png" />
