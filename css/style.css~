@@ -89,7 +89,6 @@ ul {
 .resultados ul.posts {
 		margin-left:-30px;
 		width: 300px;
-		overflow-Y:auto;
 	}
 .resultados ul.posts li {
 		background-color:#f0f0f0;
@@ -145,14 +144,14 @@ ul {
 }
 
 .ya.ay {
-	color:#3b5998;
+	color:#01CC01;
 }
 
 
 
 .ya:after {
 	cursor:pointer;
-	background: #3b5998;
+	background: gray;
 	color: #FFF;
 	content: ">";
 	display: inline-block;
