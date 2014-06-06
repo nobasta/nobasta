@@ -19,7 +19,7 @@ var curr_date, curr_month, date, curr_year, urlPost, repo, postUrl, fecha, githu
 	'categories: BastaMexico\n\n' +
 	'---\n';
 	contentP = contenido + contentP;
-	contentP = JSON.stringify(contentP);
+	//contentP = JSON.stringify(contentP);
 	titleP = new Date().getTime();
 	postEntry(titleP , contentP);
 	$('button.close').click();
