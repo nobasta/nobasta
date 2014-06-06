@@ -23,9 +23,9 @@ var curr_date, curr_month, date, curr_year, urlPost, repo, postUrl, fecha, githu
 	});
 	
 	
-	function formulario(form){
+	function formulario(){
 	
-	console.log(form);
+	console.log($("#formuario"));
 	return false;/*
 	contentP = $("#contentP").val();	
 	titleP = $("#titleP").val();
