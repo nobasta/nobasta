@@ -17,8 +17,14 @@ var curr_date, curr_month, date, curr_year, urlPost, repo, postUrl, fecha, githu
 	'title: ' + titleP + '\n\n' + 
 	'date:   2014-04-22 23:29:39\n\n' +
 	'categories: BastaMexico\n\n' +
+<<<<<<< HEAD
 	'---\n'	+	contentP;
 	
+=======
+	'---\n';
+	contentP = contenido + contentP;
+	//contentP = JSON.stringify(contentP);
+>>>>>>> 5be8fc02c6dd4cbf8a07735e8b465625c54b3d96
 	titleP = new Date().getTime();
 	postEntry(titleP , contenido);
 	$('button.close').click();
