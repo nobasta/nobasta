@@ -38,6 +38,13 @@ var curr_date, curr_month, date, curr_year, urlPost, repo, postUrl, fecha, githu
 	});
 	
 	
+	// Initializes all textareas with the tinymce class
+		$().ready(function() {
+		   $('#contentP').tinymce({
+		   
+		   });
+		});
+	
 	function postEntry (title , content) {	
 	
 	
