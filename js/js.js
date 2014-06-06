@@ -8,7 +8,6 @@ var curr_date, curr_month, date, curr_year, urlPost, repo, postUrl, fecha, githu
 			$('#myModal').modal(options);
 		});
 	$("#savePost").click(function(){
-	contentP = {};
 	//contentP = B64.encode($("#contentP").val());
 	contentP = /*escape(*/$("#contentP").val()/*)*/;	
 	titleP = /*escape(*/$("#titleP").val()/*)*/;
