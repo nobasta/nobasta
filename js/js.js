@@ -7,21 +7,7 @@ var curr_date, curr_month, date, curr_year, urlPost, repo, postUrl, fecha, githu
 	$("#launchMod").click(function(){
 			$('#myModal').modal(options);
 		});
-	$("#savePost").click(function(){
-	contentP = $("#contentP").val();	
-	titleP = $("#titleP").val();
-	contenido = 
-	'---\n\n'+
-	'layout: post\n\n'+
-	'title: ' + titleP + '\n\n' +
-	'categories: BastaMexico\n\n'+
-	'---\n\n'+
-	contentP;
-	
-	titleP = new Date().getTime();
-	postEntry(titleP , contenido);
-	$('button.close').click();
-		});	
+	/*$("#savePost").click(*//*)*/;	
 
 	//$('.b64, .b64p p').each(decodeThis)
 	$(".b64, .b64p p").each(unescapeThis);
@@ -37,6 +23,22 @@ var curr_date, curr_month, date, curr_year, urlPost, repo, postUrl, fecha, githu
 	});
 	
 	
+	function formulario(form){
+	console.log(form);/*
+	contentP = $("#contentP").val();	
+	titleP = $("#titleP").val();
+	contenido = 
+	'---\n\n'+
+	'layout: post\n\n'+
+	'title: ' + titleP + '\n\n' +
+	'categories: BastaMexico\n\n'+
+	'---\n\n'+
+	contentP;
+	
+	titleP = new Date().getTime();
+	postEntry(titleP , contenido);
+	$('button.close').click();
+*/		}
 	
 	function postEntry (title , content) {	
 	
