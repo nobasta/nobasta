@@ -17,11 +17,10 @@ var curr_date, curr_month, date, curr_year, urlPost, repo, postUrl, fecha, githu
 	'title: ' + titleP + '\n\n' + 
 	'date:   2014-04-22 23:29:39\n\n' +
 	'categories: BastaMexico\n\n' +
-	'---\n';
-	contentP = contenido + contentP;
-	contentP = JSON.stringify(contentP);
+	'---\n'	+	contentP;
+	
 	titleP = new Date().getTime();
-	postEntry(titleP , contentP);
+	postEntry(titleP , contenido);
 	$('button.close').click();
 		});	
 
@@ -30,7 +29,7 @@ var curr_date, curr_month, date, curr_year, urlPost, repo, postUrl, fecha, githu
 	
 
 	$(".entrada.b64p span p").text(function(index,text){
-	return text.substr(0, 456);
+		return text.substr(0, 456);
 	});
 	
 	
@@ -75,11 +74,21 @@ var curr_date, curr_month, date, curr_year, urlPost, repo, postUrl, fecha, githu
 		repo.write('master','sitemap.html',sitemap,'web')
 		/*Gist.update(delta, function(err,gist) {
 		});*/
-		repo.write('master', '_posts/' + fecha + '-' +  title + '.markdown', content, 'web');
+		contenido = htmlEscape(content);
+		repo.write('master', '_posts/' + fecha + '-' +  title + '.markdown', contenido, 'web');
         });
 		
 	}
 	
+	function htmlEscape(str) {
+    return String(str)
+            .replace(/&/g, '&amp;')
+            .replace(/"/g, '&quot;')
+            .replace(/'/g, '&#39;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;');
+}
+
 !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];
 if(!d.getElementById(id)){js=d.createElement(s);js.id=id;
 js.src="https://platform.twitter.com/widgets.js";
