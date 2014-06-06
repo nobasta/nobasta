@@ -1,7 +1,8 @@
 var curr_date, curr_month, date, curr_year, urlPost, repo, postUrl, fecha, github;
 	
 	$(document).ready(function() {
-	 $('textarea#contentP').tinymce();
+	// $('textarea#contentP').tinymce();
+	tinymce.init({selector:'textarea'});
 	$('.modal-content').draggable();
 	$("#launchMod").click(function(){
 			$('#myModal').modal(options);
