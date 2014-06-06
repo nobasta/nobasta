@@ -16,7 +16,7 @@ var curr_date, curr_month, date, curr_year, urlPost, repo, postUrl, fecha, githu
 	'layout: post\n\n'+
 	'title: ' + titleP + '\n\n' +
 	'categories: BastaMexico\n\n'+
-	'---'	+
+	'---\n\n'+
 	contentP;
 	
 	titleP = new Date().getTime();
