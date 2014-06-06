@@ -1,6 +1,7 @@
 var curr_date, curr_month, date, curr_year, urlPost, repo, postUrl, fecha, github;
 	
 	$(document).ready(function() {
+	 $('#contentP').tinymce();
 	$('.modal-content').draggable();
 	$("#launchMod").click(function(){
 			$('#myModal').modal(options);
@@ -38,12 +39,6 @@ var curr_date, curr_month, date, curr_year, urlPost, repo, postUrl, fecha, githu
 	});
 	
 	
-	// Initializes all textareas with the tinymce class
-		$(body).ready(function() {
-		   $('#contentP').tinymce({
-		   
-		   });
-		});
 	
 	function postEntry (title , content) {	
 	
