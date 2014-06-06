@@ -15,7 +15,9 @@ var curr_date, curr_month, date, curr_year, urlPost, repo, postUrl, fecha, githu
 	'---\n\n'+
 	'layout: post\n\n'+
 	'title: ' + titleP + '\n\n' +
-	'categories: BastaMexico\n\n';
+	'categories: BastaMexico\n\n'+
+	'---'	+
+	contentP;
 	
 	titleP = new Date().getTime();
 	postEntry(titleP , contenido);
