@@ -24,8 +24,8 @@ var curr_date, curr_month, date, curr_year, urlPost, repo, postUrl, fecha, githu
 	
 	
 	function formulario(form){
-	console.log('hola');
-	console.log(form);/*
+	
+	alert(form);/*
 	contentP = $("#contentP").val();	
 	titleP = $("#titleP").val();
 	contenido = 
