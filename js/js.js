@@ -3,7 +3,7 @@ var curr_date, curr_month, date, curr_year, urlPost, repo, postUrl, fecha, githu
 	$(document).ready(function() {
 		tinymce.init({
                     selector:'textarea',
-                    plugins: "image, link, print",
+                    plugins: "image, link, media, print",
                     toolbar: "styleselect | undo redo | removeformat | bold italic underline |  aligncenter alignjustify  | bullist numlist outdent indent | link | print | fontselect fontsizeselect",
                     menubar: false,
                     statusbar: true,
