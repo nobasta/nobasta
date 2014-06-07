@@ -18,4 +18,4 @@ categories: BastaMexico
 <p>&nbsp;</p>
 <p>Por favor rolen la foto y la historia, no es justo que le desgracien la vida as&iacute; a un ni&ntilde;o s&oacute;lo xq un pendejo porta una placa.</p>
 <p>&nbsp;</p>
-<p>&lt;img src="https://scontent-a-lga.xx.fbcdn.net/hphotos-prn1/t1.0-9/p296x100/1620773_755092497836778_703870352_n.jpg" /&gt;</p>
+<img src="https://scontent-a-lga.xx.fbcdn.net/hphotos-prn1/t1.0-9/p296x100/1620773_755092497836778_703870352_n.jpg" />
