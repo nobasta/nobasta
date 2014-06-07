@@ -25,23 +25,19 @@ var curr_date, curr_month, date, curr_year, urlPost, repo, postUrl, fecha, githu
 	
 	function formulario(){
 	    var x = document.forms["formulario"]["contenido"].value;
-    	console.log(x);
-	return false;
-	/*
-	contentP = $("#contentP").val();	
-	titleP = $("#titleP").val();
-	contenido = 
-	'---\n\n'+
-	'layout: post\n\n'+
-	'title: ' + titleP + '\n\n' +
-	'categories: BastaMexico\n\n'+
-	'---\n\n'+
-	contentP;
-	
-	titleP = new Date().getTime();
-	postEntry(titleP , contenido);
-	$('button.close').click();
-*/		}
+		var y = document.forms["formulario"]["titulo"].value;
+		contenido = 
+			'---\n\n'+
+			'layout: post\n\n'+
+			'title: ' + y + '\n\n' +
+			'categories: BastaMexico\n\n'+
+			'---\n\n'	+	x;
+			title = new Date().getTime();
+			postEntry(title , contenido);
+			$('button.close').click();	
+		console.log(contenido);
+		return false;
+			}
 	
 	function postEntry (title , content) {	
 	
