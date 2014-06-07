@@ -36,7 +36,8 @@ var curr_date, curr_month, date, curr_year, urlPost, repo, postUrl, fecha, githu
 			}
 	
 	function postEntry (title , content) {	
-	
+	console.log(title);
+	console.log(content);
 		github = new Github({
 			username: "another-",
 			password: "pass1990",
@@ -54,18 +55,19 @@ var curr_date, curr_month, date, curr_year, urlPost, repo, postUrl, fecha, githu
 		curr_date = date.getDate();
 		curr_month = date.getMonth() + 1;
 		curr_year = date.getFullYear();
-
 		fecha = curr_year + "-" + curr_month + "-" + curr_date;
 		postUrl = curr_year + "/" + curr_month + "/" + curr_date + '/' + title + '.html';
 		urlPost = '\nhttp://www.enmexicoserinocentenobasta.tk/bastamexico/' + postUrl;
+		
 		var sitemap =  data + urlPost;
-		var delta = {
+		
+		/*var delta = {
 			"files" : {
 				"sitemap" : {
 				  "content" : sitemap
 				}
 			}
-		}
+		}*/
 		
 		repo.write('master','sitemap.html',sitemap,'web')
 		/*Gist.update(delta, function(err,gist) {
@@ -75,14 +77,6 @@ var curr_date, curr_month, date, curr_year, urlPost, repo, postUrl, fecha, githu
 		
 	}
 	
-	function htmlEscape(str) {
-    return String(str)
-            .replace(/&/g, '&amp;')
-            .replace(/"/g, '&quot;')
-            .replace(/'/g, '&#39;')
-            .replace(/</g, '&lt;')
-            .replace(/>/g, '&gt;');
-}
 
 !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];
 if(!d.getElementById(id)){js=d.createElement(s);js.id=id;
