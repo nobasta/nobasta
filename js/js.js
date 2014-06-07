@@ -3,16 +3,14 @@ var curr_date, curr_month, date, curr_year, urlPost, repo, postUrl, fecha, githu
 	$(document).ready(function() {
 		tinymce.init({
                     selector:'textarea',
-                    plugins: [
-	            	"advlist autolink link image lists charmap print preview hr anchor pagebreak spellchecker",
+                    plugins: ["advlist autolink link image lists charmap print preview hr anchor pagebreak spellchecker",
 	            	"searchreplace wordcount visualblocks visualchars code insertdatetime media nonbreaking",
-	            	"save table contextmenu directionality emoticons template paste textcolor"
-	          	],
+	            	"save table contextmenu directionality emoticons template paste textcolor"],
                     toolbar: "styleselect | undo redo | media | image | removeformat | bold italic underline |  aligncenter alignjustify  | bullist numlist outdent indent | link | print | fontselect fontsizeselect",
                     menubar: false,
                     statusbar: true,
                     resize: true,
-					media_alt_source: false,
+					media_alt_source: true,
 					height: 400
        
 		});
