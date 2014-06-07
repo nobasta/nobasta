@@ -30,8 +30,8 @@ var curr_date, curr_month, date, curr_year, urlPost, repo, postUrl, fecha, githu
 			titlep = new Date().getTime();
 			postEntry(titlep , contenido);
 			$('button.close').click();	
+		setTimeout(window.location = window.location);
 		return false;
-		setTimeout(window.location = window.location,1000)
 			}
 	
 	function postEntry (title , content) {	
