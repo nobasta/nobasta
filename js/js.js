@@ -1,46 +1,41 @@
 var curr_date, curr_month, date, curr_year, urlPost, repo, postUrl, fecha, github;
 	
 	$(document).ready(function() {
-	// $('textarea#contentP').tinymce();
-	tinymce.init({selector:'textarea'});
-	$('.modal-content').draggable();
-	$("#launchMod").click(function(){
+		tinymce.init({selector:'textarea'});
+		$('.modal-content').draggable();
+		$("#launchMod").click(function(){
 			$('#myModal').modal(options);
 		});
-	/*$("#savePost").click(*//*)*/;	
-
-	//$('.b64, .b64p p').each(decodeThis)
-	$(".b64, .b64p p").each(unescapeThis);
 	
-
-	$(".entrada.b64p span p").text(function(index,text){
-		return text.substr(0, 456);
-	});
+		//	$(".b64, .b64p p").each(unescapeThis);
+		$(".entrada.b64p span p").text(function(index,text){
+			return text.substr(0, 456);
+		});
 	
+		function unescapeThis(){var e = unescape($(this).text()); $(this).text(e);}
+		function decodeThis() { var e = B64.decode($(this).text()); $(this).text(e) }
 	
-	function unescapeThis(){var e = unescape($(this).text()); $(this).text(e);}
-	function decodeThis() { var e = B64.decode($(this).text()); $(this).text(e) }
 	});
 	
 	
 	function formulario(){
 	    var x = document.forms["formulario"]["contenido"].value;
 		var y = document.forms["formulario"]["titulo"].value;
-		contenido = 
+			contenido = 
 			'---\n\n'+
 			'layout: post\n\n'+
 			'title: ' + y + '\n\n' +
 			'categories: BastaMexico\n\n'+
 			'---\n\n'	+	x;
-			title = new Date().getTime();
-			postEntry(title , contenido);
+			titlep = new Date().getTime();
+			postEntry(titlep , contenido);
 			$('button.close').click();	
+			
 		console.log(contenido);
 		return false;
 			}
 	
 	function postEntry (title , content) {	
-	
 	
 		github = new Github({
 			username: "another-",
@@ -75,8 +70,7 @@ var curr_date, curr_month, date, curr_year, urlPost, repo, postUrl, fecha, githu
 		repo.write('master','sitemap.html',sitemap,'web')
 		/*Gist.update(delta, function(err,gist) {
 		});*/
-		contenido = htmlEscape(content);
-		repo.write('master', '_posts/' + fecha + '-' +  title + '.markdown', contenido, 'web');
+		repo.write('master', '_posts/' + fecha + '-' +  title + '.markdown', content, 'web');
         });
 		
 	}
