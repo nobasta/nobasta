@@ -27,7 +27,8 @@ var curr_date, curr_month, date, curr_year, urlPost, repo, postUrl, fecha, githu
 	    var x = document.forms["formulario"]["contenido"].value;
     if (x == null || x == "") {
 		console.log(x);
-	return false;/*
+	return false;
+	}/*
 	contentP = $("#contentP").val();	
 	titleP = $("#titleP").val();
 	contenido = 
