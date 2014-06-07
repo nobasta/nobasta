@@ -28,7 +28,6 @@ var curr_date, curr_month, date, curr_year, urlPost, repo, postUrl, fecha, githu
 	$datos = $("#form #input").each(function() {
 	data[theFieldName] = theFieldValue;
 	});
-	
 	console.log($datos);
 	return false;/*
 	contentP = $("#contentP").val();	
