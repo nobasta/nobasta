@@ -5,9 +5,7 @@ var curr_date, curr_month, date, curr_year, urlPost, repo, postUrl, fecha, githu
                     selector:'textarea',
                     plugins: "image, link, media, print",
                     toolbar: "styleselect | undo redo | media | image | removeformat | bold italic underline |  aligncenter alignjustify  | bullist numlist outdent indent | link | print | fontselect fontsizeselect",
-                    menubar: false,
-                    statusbar: true,
-                    resize: true
+                 
        
 		});
 		$('.modal-content').draggable();
