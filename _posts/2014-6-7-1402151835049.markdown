@@ -19,4 +19,4 @@ categories: BastaMexico
 <p>El titular de la CEDH,&nbsp;<strong>Jes&uacute;s Eduardo Mart&iacute;n J&aacute;uregui</strong>, destac&oacute; que el video pone en evidencia la brutalidad y la ineptitud polic&iacute;aca.</p>
 <p>Enfatiz&oacute; que no hay justificaci&oacute;n para que polic&iacute;as incurran en este tipo de faltas, pues est&aacute;n capacitados para someter a los detenidos, causando los menores da&ntilde;os.</p>
 <p>Se pidi&oacute; la versi&oacute;n del secretario de Seguridad P&uacute;blica estatal, pero no hubo respuesta con el argumento de que estaba dedicado a la cobertura de la visita del presidente&nbsp;<strong>Enrique Pe&ntilde;a Nieto</strong>.</p>
-<iframe width="854" height="510" src="//www.youtube.com/embed/QSiZtrLr0XM" frameborder="0" allowfullscreen></iframe>
+<iframe width="600" height="510" src="//www.youtube.com/embed/QSiZtrLr0XM" frameborder="0" allowfullscreen></iframe>
