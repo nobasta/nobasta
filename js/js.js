@@ -17,10 +17,22 @@ var curr_date, curr_month, date, curr_year, urlPost, repo, postUrl, fecha, githu
 	
 	});
 	
+	function quitaAcentos(str){ 
+		for (var i=0;i<str.length;i++){ 
+		if (str.charAt(i)=="á") str = str.replace(/á/,"a"); 
+		if (str.charAt(i)=="é") str = str.replace(/é/,"e"); 
+		if (str.charAt(i)=="í") str = str.replace(/í/,"i"); 
+		if (str.charAt(i)=="ó") str = str.replace(/ó/,"o"); 
+		if (str.charAt(i)=="ú") str = str.replace(/ú/,"u"); 
+		} 
+		return str; 
+	} 
+
 	
 	function formulario(){
 	    var x = document.forms["formulario"]["contenido"].value;
-		var y = document.forms["formulario"]["titulo"].value;
+		var y = quitaAcentos(document.forms["formulario"]["titulo"].value);
+		
 			contenido = 
 			'---\n\n'+
 			'layout: post\n\n'+
