@@ -8,6 +8,7 @@ var curr_date, curr_month, date, curr_year, urlPost, repo, postUrl, fecha, githu
                     menubar: false,
                     statusbar: true,
                     resize: true,
+					media_alt_source: false,
 					height: 400
        
 		});
