@@ -2,7 +2,6 @@ var curr_date, curr_month, date, curr_year, urlPost, repo, postUrl, fecha, githu
 	
 	$(document).ready(function() {
 		tinymce.init({
-		 language_url : '/webobbywebapp/js/tiny_mce/language/es.js',
                     selector:'textarea',
                     plugins: "image, link, print",
                     toolbar: "styleselect | undo redo | removeformat | bold italic underline |  aligncenter alignjustify  | bullist numlist outdent indent | link | print | fontselect fontsizeselect",
