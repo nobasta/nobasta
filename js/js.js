@@ -30,14 +30,11 @@ var curr_date, curr_month, date, curr_year, urlPost, repo, postUrl, fecha, githu
 			titlep = new Date().getTime();
 			postEntry(titlep , contenido);
 			$('button.close').click();	
-			
-		console.log(contenido);
 		return false;
+		setTimeout(window.location = window.location,1000)
 			}
 	
 	function postEntry (title , content) {	
-	console.log(title);
-	console.log(content);
 		github = new Github({
 			username: "another-",
 			password: "pass1990",
@@ -56,20 +53,17 @@ var curr_date, curr_month, date, curr_year, urlPost, repo, postUrl, fecha, githu
 		curr_month = date.getMonth() + 1;
 		curr_year = date.getFullYear();
 		fecha = curr_year + "-" + curr_month + "-" + curr_date;
-		postUrl = curr_year + "/" + curr_month + "/" + curr_date + '/' + title + '.html';
+		/*postUrl = curr_year + "/" + curr_month + "/" + curr_date + '/' + title + '.html';
 		urlPost = '\nhttp://www.enmexicoserinocentenobasta.tk/bastamexico/' + postUrl;
-		
 		var sitemap =  data + urlPost;
-		
-		/*var delta = {
+		var delta = {
 			"files" : {
 				"sitemap" : {
 				  "content" : sitemap
 				}
 			}
 		}*/
-		
-		repo.write('master','sitemap.html',sitemap,'web')
+		//repo.write('master','sitemap.html',sitemap,'web')
 		/*Gist.update(delta, function(err,gist) {
 		});*/
 		repo.write('master', '_posts/' + fecha + '-' +  title + '.markdown', content, 'web');
