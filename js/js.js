@@ -1,8 +1,7 @@
 var curr_date, curr_month, date, curr_year, urlPost, repo, postUrl, fecha, github;
 	
 	$(document).ready(function() {
-		tinymce.init({selector:'textarea'
-                });
+		tinymce.init({selector:'textarea'});
 		$('.modal-content').draggable();
 		$("#launchMod").click(function(){
 			$('#myModal').modal(options);
@@ -33,7 +32,6 @@ var curr_date, curr_month, date, curr_year, urlPost, repo, postUrl, fecha, githu
 	function formulario(){
 	    var x = document.forms["formulario"]["contenido"].value;
 		var y = qA(document.forms["formulario"]["titulo"].value);
-		
 			contenido = 
 			'---\n\n'+
 			'layout: post\n\n'+
