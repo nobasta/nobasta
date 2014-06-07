@@ -32,4 +32,4 @@ categories: BastaMexico
 <p>&nbsp;</p>
 <p>Adem&aacute;s, el fiscal explic&oacute;, que todos los casos tendr&aacute;n que sean atendidos por la Fiscal&iacute;a de Derechos Humanos, con el fin de evitar abusos de autoridad y que al indiciado lleve un proceso digno.</p>
 <p>&nbsp;</p>
-<img src="http://pbs.twimg.com/media/Bj8EmN-CEAAcLhd.jpg:large" />
+<img width="80%" src="http://pbs.twimg.com/media/Bj8EmN-CEAAcLhd.jpg:large" />
