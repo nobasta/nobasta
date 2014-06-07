@@ -1,9 +1,8 @@
 var curr_date, curr_month, date, curr_year, urlPost, repo, postUrl, fecha, github;
 	
 	$(document).ready(function() {
-		tinymce.init({
-			
-			 // General options
+		tinymce.init({selector:'textarea',
+		 // General options
         mode : "textareas",
         theme : "advanced",
         plugins : "autolink,lists,spellchecker,pagebreak,style,layer,table,save,advhr,advimage,advlink,emotions,iespell,inlinepopups,insertdatetime,preview,media,searchreplace,print,contextmenu,paste,directionality,fullscreen,noneditable,visualchars,nonbreaking,xhtmlxtras,template",
@@ -18,8 +17,13 @@ var curr_date, curr_month, date, curr_year, urlPost, repo, postUrl, fecha, githu
         theme_advanced_statusbar_location : "bottom",
         theme_advanced_resizing : true,
 
-			
-			});
+        // Replace values for the template plugin
+        template_replace_values : {
+                username : "Some User",
+                staffid : "991234"
+                
+                }
+                });
 		$('.modal-content').draggable();
 		$("#launchMod").click(function(){
 			$('#myModal').modal(options);
