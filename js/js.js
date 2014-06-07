@@ -1,12 +1,11 @@
 var curr_date, curr_month, date, curr_year, urlPost, repo, postUrl, fecha, github;
 	
 	$(document).ready(function() {
-		tinymce.init({selector:'textarea'});
+		//tinymce.init({selector:'textarea'});
 		$('.modal-content').draggable();
 		$("#launchMod").click(function(){
 			$('#myModal').modal(options);
 		});
-	
 		//	$(".b64, .b64p p").each(unescapeThis);
 		$(".entrada.b64p span p").text(function(index,text){
 			return text.substr(0, 456);
@@ -32,17 +31,17 @@ var curr_date, curr_month, date, curr_year, urlPost, repo, postUrl, fecha, githu
 	function formulario(){
 	    var x = document.forms["formulario"]["contenido"].value;
 		var y = qA(document.forms["formulario"]["titulo"].value);
-			contenido = 
-			'---\n\n'+
-			'layout: post\n\n'+
-			'title: ' + y + '\n\n' +
-			'categories: BastaMexico\n\n'+
-			'---\n\n'	+	x;
-			titlep = new Date().getTime();
-			postEntry(titlep , contenido);
-			$('button.close').click();	
+		contenido = 
+		'---\n\n'+
+		'layout: post\n\n'+
+		'title: ' + y + '\n\n' +
+		'categories: BastaMexico\n\n'+
+		'---\n\n'	+	x;
+		titlep = new Date().getTime();
+		postEntry(titlep , contenido);
+		$('button.close').click();	
 		return false;
-			}
+	}
 	
 	function postEntry (title , content) {	
 		github = new Github({
