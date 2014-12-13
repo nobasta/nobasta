@@ -1,0 +1,22 @@
+---
+layout: frame
+---
+
+<div class="entrada">
+	<h2>{{ page.title }}</h2>
+	<div class="meta">
+		<small>
+			<b>
+				Publicado:	
+			</b>
+				{{ page.date | date_to_string }}
+		</small>
+	</div>
+	<div class="post">{{ content }}</div>
+	<div class="social-share">
+		<div class="fb-like" data-href="http://nobasta.github.io{{ page.url }}" data-layout="button" data-action="recommend" data-show-faces="false" data-share="true"></div>
+		<a href="https://twitter.com/intent/tweet?button_hashtag=BastaMexico" class="twitter-hashtag-button" data-url="http://nobasta.github.io{{ page.url }}" data-lang="es" data-related="jasoncosta">Tweet #BastaMexico</a>
+		<g:plusone size="medium"></g:plusone>
+		<div class="fb-comments" data-href="http://nobasta.github.io/" data-numposts="10" data-colorscheme="light"></div>
+	</div>
+</div>
