@@ -2,7 +2,7 @@ var curr_date, curr_month, date, curr_year, urlPost, repo, postUrl, fecha, githu
 	
 	$(document).ready(function() {
 
-		$(".mce-ico .mce-i-media").click(function(){alert("hola")});
+		$(".mce-ico").click(function(){alert("hola")});
 
 		tinymce.init({
                     selector:'textarea',
