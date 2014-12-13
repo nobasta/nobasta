@@ -18,8 +18,8 @@ var curr_date, curr_month, date, curr_year, urlPost, repo, postUrl, fecha, githu
        
 		});
 	
-		$(".mce-i-media").click(function(){alert("hola")});
-	
+		$("#clickale").click(function(){alert("hola")});
+
 	});
 	
 	function qA(str){ 
