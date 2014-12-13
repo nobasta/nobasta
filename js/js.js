@@ -15,9 +15,7 @@ var curr_date, curr_month, date, curr_year, urlPost, repo, postUrl, fecha, githu
                     resize: true,
 					media_alt_source: true,
 					height: 400
-       
 		});
-
 	});
 	
 	function qA(str){ 
