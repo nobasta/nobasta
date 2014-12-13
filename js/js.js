@@ -1,6 +1,10 @@
 var curr_date, curr_month, date, curr_year, urlPost, repo, postUrl, fecha, github;
 	
 	$(document).ready(function() {
+
+		$(".mce-container").click(function(){
+				$('button.close').click();	
+		});
 		tinymce.init({
                     selector:'textarea',
                     plugins: ["advlist autolink link image lists charmap print preview hr anchor pagebreak spellchecker",
@@ -14,11 +18,9 @@ var curr_date, curr_month, date, curr_year, urlPost, repo, postUrl, fecha, githu
 					height: 400
        
 		});
-		//$('.modal-content').draggable();
 		$("#launchMod").click(function(){
 			$('#myModal').modal(options);
 		});
-		//	$(".b64, .b64p p").each(unescapeThis);
 		$(".entrada.b64p span p").text(function(index,text){
 			return text.substr(0, 456);
 		});
@@ -49,8 +51,7 @@ var curr_date, curr_month, date, curr_year, urlPost, repo, postUrl, fecha, githu
 		'title: ' + y + '\n\n' +
 		'categories: BastaMexico\n\n'+
 		'---\n\n'	+	x;
-		titlep = new Date().getTime();
-		postEntry(titlep , contenido);
+		postEntry(new Date().getTime(), contenido);
 		$('button.close').click();	
 		return false;
 	}
