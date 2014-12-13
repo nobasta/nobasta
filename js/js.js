@@ -18,8 +18,9 @@ var curr_date, curr_month, date, curr_year, urlPost, repo, postUrl, fecha, githu
        
 		});
 	
-		$("#clickale").click(function(){alert("hola")});
-
+		$("#clickale").click(function() {
+  alert( "Handler for .click() called." );
+});
 	});
 	
 	function qA(str){ 
