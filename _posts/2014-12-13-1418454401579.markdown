@@ -1,0 +1,12 @@
+---
+
+layout: post
+
+title: Joven Irrumpe premio nobel de la paz
+
+categories: BastaMexico
+
+---
+
+<h1><strong>Vamos M&eacute;xico!</strong></h1>
+<p><iframe src="//www.youtube.com/embed/ApKtqw-BVEE" width="425" height="350"></iframe></p>
