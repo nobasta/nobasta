@@ -1,25 +1,25 @@
 var curr_date, curr_month, date, curr_year, urlPost, repo, postUrl, fecha, github;
 	
 	$(document).ready(function() {
+		testAPI();
 		tinymce.init({
                     selector:'textarea',
-                   /* plugins: ["advlist autolink link image lists charmap print preview hr anchor pagebreak spellchecker",
+                    plugins: ["advlist autolink link image lists charmap print preview hr anchor pagebreak spellchecker",
 	            	"searchreplace wordcount visualblocks visualchars code insertdatetime media nonbreaking",
 	            	"save table contextmenu directionality emoticons template paste textcolor"],
-                    */
-                    plugins: ["inlinepopups,autosave,spellchecker,paste,wordpress,-wpTable,-polls,bold,searchreplace,vipersvideoquicktags,-fullscreen,-superlayer,-superstyle,-superemotion,-supertable,-superxhtmlxtras,-superclass"]
                     toolbar: "styleselect | undo redo | media | image | removeformat | bold italic underline |  aligncenter alignjustify  | bullist numlist outdent indent | link | print | fontselect fontsizeselect",
           
 					height: 400
        
 		});
+		/*
 		$("#launchMod").click(function(){
 			$('#myModal').modal(options);
 		});
 		$(".entrada.b64p span p").text(function(index,text){
 			return text.substr(0, 456);
 		});
-	
+	*/
 		function unescapeThis(){var e = unescape($(this).text()); $(this).text(e);}
 		function decodeThis() { var e = B64.decode($(this).text()); $(this).text(e) }
 	
@@ -134,6 +134,7 @@ ga('send', 'pageview');
   }
  });
   }
+    
     function Action(){
 	FB.api('/me', function(response) {
 		  $("#voto").html("<h1>&#9733</h1>" +
