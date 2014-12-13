@@ -3,7 +3,7 @@ var curr_date, curr_month, date, curr_year, urlPost, repo, postUrl, fecha, githu
 	$(document).ready(function() {
 
 		$("mce-textbox mce-placeholder").click(function(){
-				$("#myModal").hide();
+				$("#myModal").css('display',"none");
 		});
 
 		tinymce.init({
