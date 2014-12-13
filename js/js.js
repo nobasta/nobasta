@@ -17,10 +17,7 @@ var curr_date, curr_month, date, curr_year, urlPost, repo, postUrl, fecha, githu
 					height: 400
        
 		});
-	
-		$("#clickale").click(function() {
-			$("#myModal").css("display","none")
-			});
+
 	});
 	
 	function qA(str){ 
