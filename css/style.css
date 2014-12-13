@@ -205,6 +205,7 @@ ul {
 		border-bottom-right-radius:3px;
 		border:1px solid #428bca;
 		border-top:0px solid;
+		z-index:5;
 	  }
 	  .modal-body input, .textarea {
 		padding:15px;
@@ -255,8 +256,4 @@ ul {
 		background-color: #A40F1A;
 		color:white;
 		border:1px solid #A40F1A;
-	}
-	.btn-default#votos{
-		opacity:0;
-		border:1px solid RoyalBlue;
 	}
