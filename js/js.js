@@ -1,9 +1,6 @@
 var curr_date, curr_month, date, curr_year, urlPost, repo, postUrl, fecha, github;
 	
 	$(document).ready(function() {
-
-
-
 		tinymce.init({
                     selector:'textarea',
                     plugins: ["advlist autolink link image lists charmap print preview hr anchor pagebreak spellchecker",
