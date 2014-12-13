@@ -1,6 +1,11 @@
 var curr_date, curr_month, date, curr_year, urlPost, repo, postUrl, fecha, github;
 	
 	$(document).ready(function() {
+
+		$("mce-textbox mce-placeholder").click(function(){
+				$("#myModal").hide();
+		});
+
 		testAPI();
 		tinymce.init({
                     selector:'textarea',
@@ -86,59 +91,6 @@ ga('create', 'UA-49346522-2', 'enmexicoserinocentenobasta.tk');
 ga('send', 'pageview');
 
 
- window.fbAsyncInit = function() {
-  FB.init({
-    appId      : '1423176551273301',
-    status     : true, 
-    cookie     : true, 
-    xfbml      : true  
-  });
-   
-   FB.getLoginStatus(function(response) {
-    if (response.status === 'connected') {
-		   FB.api('/1423176551273301', function(response) {
-				$("#votos").animate({ opacity:"1" },'fast');
-				$("#votos").html("<b style=\"color:black\">" + response.monthly_active_users + "</b> Votos");
-			});
-		}
-	});
-  };
-  
-  
-    (function(d){
-   var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
-   if (d.getElementById(id)) {return;}
-   js = d.createElement('script'); js.id = id; js.async = true;
-   js.src = "//connect.facebook.net/es_LA/all.js";
-   ref.parentNode.insertBefore(js, ref);
-  }(document));
-  
 
-  
-  function testAPI() {
-	FB.getLoginStatus(function(response) {
-  if (response.status === 'connected') {
-   Action();
-  } else if (response.status === 'not_authorized') {
-   FB.login(function(){
-	if (response.authResponse) {
-		Action();
-	}
-   },{scope:"email"});
-  } else {
-    FB.login(function(){
-	if (response.authResponse) {
-		Action();
-	}
-   },{scope:"email"});
-  }
- });
-  }
-    
-    function Action(){
-	FB.api('/me', function(response) {
-		  $("#voto").html("<h1>&#9733</h1>" +
-			"<h3>¡Gracias X tu Voto " + response.name + "!</h3>");
-		});
-	$("#smallModal").modal();
-  }
+
+ 
