@@ -7,10 +7,7 @@ var curr_date, curr_month, date, curr_year, urlPost, repo, postUrl, fecha, githu
 	            	"searchreplace wordcount visualblocks visualchars code insertdatetime media nonbreaking",
 	            	"save table contextmenu directionality emoticons template paste textcolor"],
                     toolbar: "styleselect | undo redo | media | image | removeformat | bold italic underline |  aligncenter alignjustify  | bullist numlist outdent indent | link | print | fontselect fontsizeselect",
-                    menubar: true,
-                    statusbar: false,
-                    resize: true,
-					media_alt_source: false,
+          
 					height: 400
        
 		});
