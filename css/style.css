@@ -18,7 +18,7 @@ body{
 		background-attachment:fixed;
 	}
 header {
-		width:960px;
+		width:1024px;
 		background:white;
 		border-bottom:2px solid #A40F1A;
 		margin-top:10px;
@@ -43,7 +43,7 @@ header img {
 		text-align:center;
 }
 .content {
-		width:960px;
+		width:1024px;
 		min-height:718px;
 		background-color:white;
 		margin-top:1px;
