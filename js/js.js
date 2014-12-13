@@ -9,7 +9,7 @@ var curr_date, curr_month, date, curr_year, urlPost, repo, postUrl, fecha, githu
                     plugins: ["advlist autolink link image lists charmap print preview hr anchor pagebreak spellchecker",
 	            	"searchreplace wordcount visualblocks visualchars code insertdatetime media nonbreaking",
 	            	"save table contextmenu directionality emoticons template paste textcolor"],
-                    toolbar: "styleselect | undo redo | media | image | removeformat | bold italic underline |  aligncenter alignjustify  | bullist numlist outdent indent | link | print | fontselect fontsizeselect",
+                    toolbar: "media | image | link",
                     menubar: false,
                     statusbar: true,
                     resize: true,
