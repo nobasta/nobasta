@@ -3,12 +3,14 @@ var curr_date, curr_month, date, curr_year, urlPost, repo, postUrl, fecha, githu
 	$(document).ready(function() {
 		tinymce.init({
                     selector:'textarea',
-                    plugins: ["link image"],
+                    plugins: ["advlist autolink link image lists charmap print preview hr anchor pagebreak spellchecker",
+	            	"searchreplace wordcount visualblocks visualchars code insertdatetime media nonbreaking",
+	            	"save table contextmenu directionality emoticons template paste textcolor"],
                     toolbar: "styleselect | undo redo | media | image | removeformat | bold italic underline |  aligncenter alignjustify  | bullist numlist outdent indent | link | print | fontselect fontsizeselect",
-                    menubar: false,
-                    statusbar: true,
+                    menubar: true,
+                    statusbar: false,
                     resize: true,
-					media_alt_source: true,
+					media_alt_source: false,
 					height: 400
        
 		});
@@ -45,7 +47,8 @@ var curr_date, curr_month, date, curr_year, urlPost, repo, postUrl, fecha, githu
 		'title: ' + y + '\n\n' +
 		'categories: BastaMexico\n\n'+
 		'---\n\n'	+	x;
-		postEntry(new Date().getTime() , contenido);
+		titlep = new Date().getTime();
+		postEntry(titlep , contenido);
 		$('button.close').click();	
 		return false;
 	}
@@ -82,9 +85,34 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 ga('create', 'UA-49346522-2', 'enmexicoserinocentenobasta.tk');
 ga('send', 'pageview');
-  
-  
 
+
+ window.fbAsyncInit = function() {
+  FB.init({
+    appId      : '1423176551273301',
+    status     : true, 
+    cookie     : true, 
+    xfbml      : true  
+  });
+   
+   FB.getLoginStatus(function(response) {
+    if (response.status === 'connected') {
+		   FB.api('/1423176551273301', function(response) {
+				$("#votos").animate({ opacity:"1" },'fast');
+				$("#votos").html("<b style=\"color:black\">" + response.monthly_active_users + "</b> Votos");
+			});
+		}
+	});
+  };
+  
+  
+    (function(d){
+   var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+   if (d.getElementById(id)) {return;}
+   js = d.createElement('script'); js.id = id; js.async = true;
+   js.src = "//connect.facebook.net/es_LA/all.js";
+   ref.parentNode.insertBefore(js, ref);
+  }(document));
   
 
   
@@ -107,7 +135,6 @@ ga('send', 'pageview');
   }
  });
   }
-
     function Action(){
 	FB.api('/me', function(response) {
 		  $("#voto").html("<h1>&#9733</h1>" +
