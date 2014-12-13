@@ -19,7 +19,7 @@ var curr_date, curr_month, date, curr_year, urlPost, repo, postUrl, fecha, githu
 		});
 	
 		$("#clickale").click(function() {
-  alert( "Handler for .click() called." );
+console.log( "Handler for .click() called." );
 });
 	});
 	
