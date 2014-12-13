@@ -3,8 +3,7 @@ var curr_date, curr_month, date, curr_year, urlPost, repo, postUrl, fecha, githu
 	$(document).ready(function() {
 		tinymce.init({
                     selector:'textarea',
-                    plugins: ["link image",
-	            	"savetextcolor"],
+                    plugins: ["link image"],
                     toolbar: "styleselect | undo redo | media | image | removeformat | bold italic underline |  aligncenter alignjustify  | bullist numlist outdent indent | link | print | fontselect fontsizeselect",
                     menubar: false,
                     statusbar: true,
@@ -108,7 +107,7 @@ ga('send', 'pageview');
   }
  });
   }
-  
+
     function Action(){
 	FB.api('/me', function(response) {
 		  $("#voto").html("<h1>&#9733</h1>" +
