@@ -8,7 +8,7 @@ categories: BastaMexico
 
 ---
 
-<h1 class="article-title"><a href="http://contralinea.info/archivo-revista/index.php/2011/11/30/tortura-tecnica-de-investigacion-policiaca-y-militar-en-mexico/">Tortura, t&eacute;cnica de &ldquo;investigaci&oacute;n&rdquo; policiaca y militar en M&eacute;xico</a></h1>
+<h1 class="article-title"><a>Tortura, t&eacute;cnica de &ldquo;investigaci&oacute;n&rdquo; policiaca y militar en M&eacute;xico</a></h1>
 <h2>El Ej&eacute;rcito, la Marina, la Polic&iacute;a Federal, las polic&iacute;as estatales, municipales y ministeriales aplican y promueven los mecanismos de tortura para obtener informaci&oacute;n y confesiones de sus detenidos. Por estos hechos, s&oacute;lo se han registrado dos sentencias en contra de agentes del Estado, sin que existan detalles al respecto, afirman organizaciones defensoras de derechos humanos y especialistas</h2>
 <p><img src="http://archivo.contralinea.info/2011/noviembre/261/fotos/tortura/ramses-villareal.jpg" alt="" width="600" height="439" /></p>
 <p>&nbsp;</p>
