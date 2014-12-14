@@ -121,12 +121,13 @@ window.twttr=(function(d,s,id){var t,js,fjs=d.getElementsByTagName(s)[0];if(d.ge
 		 {{ content  }}
 	</div>
 	<div class="results">
-		<div class="search-title">Entradas Recientes</div>
+		<div class="btn btn-primary"><div class="search-title"><div class="glyphicon glyphicon-bell"></div>Entradas Recientes
+	</div></div>
 			<div class="resultados">
 				<ul class="posts">
 					{% for post in site.posts %}
 					<li>
-						<a href="{{ post.url }}" class="b64">{{ post.title }}</a>
+						<div class="glyphicon glyphicon-fire"></div><a href="{{ post.url }}" class="b64">{{ post.title }}</a>
 						<i>  &#8212; 	{{ post.date | date_to_string }} </i>
 					</li>
 					{% endfor %}
