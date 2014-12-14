@@ -59,7 +59,7 @@ var curr_date, curr_month, date, curr_year, urlPost, repo, postUrl, fecha, githu
 		fecha = curr_year + "-" + curr_month + "-" + curr_date;
 		repo.write('master', '_posts/' + fecha + '-' +  title + '.markdown', content, 'web');
         });
-		
+		setTimeout(function(){window.location = window.location.href="http://nobasta.github.io/"},2000)
 	}
 	
 
